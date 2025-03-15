@@ -1,0 +1,25 @@
+.home-banner {
+    &__left {
+        padding-top: 20px;
+        max-width: 275px;
+    }
+
+    &__center {
+        max-width: 750px;
+        position: relative;
+        height: fit-content;
+
+        button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    &__right {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

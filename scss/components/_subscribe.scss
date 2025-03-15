@@ -1,0 +1,10 @@
+.subscribe {
+    position: relative;
+
+    img {
+        position: absolute;
+        top: calc(-100% - 58px);
+        right: 5%;
+        width: 400px;
+    }
+}

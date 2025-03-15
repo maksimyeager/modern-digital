@@ -1,0 +1,35 @@
+.site-type {
+    position: relative;
+    border: 1px solid #fff;
+    border-radius: 35px;
+    padding: 50px;
+
+    &__img {
+        position: absolute;
+        z-index: 10;
+
+        &--1{
+            width: 230px;
+            top: -75px;
+            right: -35px;
+        }
+
+        &--2{
+            width: 180px;
+            top: -50px;
+            right: -20px;
+        }
+
+        &--3{
+            width: 180px;
+            top: -35px;
+            right: -20px;
+        }
+
+        &--4{
+            width: 180px;
+            top: -40px;
+            right: -32px;
+        }
+    }
+}
