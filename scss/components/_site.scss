@@ -1,32 +1,74 @@
+.sites__desc {
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.section--site-types {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        overflow: hidden;
+
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+    }
+}
+
 .site-type {
     position: relative;
     border: 1px solid #fff;
     border-radius: 35px;
-    padding: 50px;
+    padding: 42px;
+
+    @media (max-width: 768px) {
+        padding: 30px 24px;
+        border-radius: 23px;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 30px;
+
+        @media (max-width: 768px) {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 300;
+        padding-right: 15px;
+    }
 
     &__img {
         position: absolute;
         z-index: 10;
 
-        &--1{
+        &--1 {
             width: 230px;
             top: -75px;
             right: -35px;
         }
 
-        &--2{
+        &--2 {
             width: 180px;
             top: -50px;
             right: -20px;
         }
 
-        &--3{
+        &--3 {
             width: 180px;
             top: -35px;
             right: -20px;
         }
 
-        &--4{
+        &--4 {
             width: 180px;
             top: -40px;
             right: -32px;

@@ -1,9 +1,7 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 import { Button } from "../ui";
-import { Container } from "./container";
 import Link from "next/link";
 import Image from "next/image";
 import { MobileNavbar } from "./mobile-navbar";
@@ -12,7 +10,7 @@ interface Props {
     className?: string;
 }
 
-export const Header: React.FC<Props> = ({ className }) => {
+export const Header: React.FC<Props> = () => {
     const [open, setOpen] = useState(false);
     const handleClose = () => {
         setOpen(false);
@@ -20,8 +18,8 @@ export const Header: React.FC<Props> = ({ className }) => {
     };
     return (
         <>
-            <header className={cn("header", className)}>
-                <Container className="flex items-center justify-between py-8">
+            <header className="header">
+                <div className="container">
                     <Link href={"/"}>
                         <Image
                             src={"/images/logo-1.png"}
@@ -30,7 +28,7 @@ export const Header: React.FC<Props> = ({ className }) => {
                             height={69.73692321777344}
                         />
                     </Link>
-                    <ul className="hidden lg:flex gap-16 items-center text-lg font-normal">
+                    <ul className="header__list">
                         <li>
                             <Link href={"/site"}>Sayt</Link>
                         </li>
@@ -47,15 +45,18 @@ export const Header: React.FC<Props> = ({ className }) => {
                     <div>
                         <Button
                             variant={"secondary"}
-                            className="hidden lg:flex text-lg font-semibold shadow-secondary"
+                            className="hidden md:flex text-lg font-semibold shadow-secondary"
                         >
                             AZ
                         </Button>
-                        <button className="lg:hidden block" onClick={() => setOpen(true)}>
+                        <button
+                            className="header__btn"
+                            onClick={() => setOpen(true)}
+                        >
                             <img src="./images/hamburger.svg" alt="" />
                         </button>
                     </div>
-                </Container>
+                </div>
             </header>
             <MobileNavbar open={open} onClose={handleClose} />
         </>

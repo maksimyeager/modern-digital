@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { Subscribe } from "@/components/shared";
 import { HomeBanner } from "@/components/shared/home-banner";
 import { HomeSlider } from "@/components/shared/home-slider";

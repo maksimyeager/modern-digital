@@ -1,9 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
-import { cn } from "@/lib/utils";
 import React from "react";
-import { Container } from "./container";
 import Link from "next/link";
-import { Title } from "./title";
 import { FaPhoneAlt } from "react-icons/fa";
 import { BiSolidEnvelope } from "react-icons/bi";
 

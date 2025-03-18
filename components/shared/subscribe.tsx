@@ -1,6 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { Button } from "../ui";
 
 interface Props {
     className?: string;
@@ -9,11 +7,14 @@ interface Props {
 export const Subscribe: React.FC<Props> = () => {
     return (
         <div className="subscribe">
-            <h2>Abunə Olun!</h2>
             <div className="subscribe__wrapper">
-                <p>
-                    Xüsusi Təkliflər Və Yeniliklərdən Ilk Sizin Xəbəriniz Olsun
-                </p>
+                <div className="subscribe__info">
+                    <h2>Abunə Olun!</h2>
+                    <p>
+                        Xüsusi Təkliflər Və Yeniliklərdən Ilk Sizin Xəbəriniz
+                        Olsun
+                    </p>
+                </div>
                 <form action="" className="subscribe__form">
                     <input type="text" placeholder="Enter Email Address" />
 

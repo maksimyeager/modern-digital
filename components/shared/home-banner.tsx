@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "@/components/shared";
 import { Button } from "../ui";
 import { FiArrowUpRight } from "react-icons/fi";
 
@@ -10,7 +9,7 @@ interface Props {
 export const HomeBanner: React.FC<Props> = () => {
     return (
         <div className="home-banner">
-            <Container className="flex gap-4">
+            <div className="container flex gap-4">
                 <div className="home-banner__left">
                     <img src="./images/home-banner-1.png" alt="" />
                     <p>
@@ -59,7 +58,7 @@ export const HomeBanner: React.FC<Props> = () => {
                         <p className="text-[14px] font-light">Websites</p>
                     </div>
                 </div>
-            </Container>
+            </div>
         </div>
     );
 };

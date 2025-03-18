@@ -1,0 +1,29 @@
+.header {
+    .container {
+        padding: 30px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 500;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+}

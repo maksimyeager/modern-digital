@@ -19,18 +19,27 @@
 
 .rewiew-slider {
     max-width: 1920px;
+    width: 100%;
     margin: 0 auto;
 
     &__wrapper {
         padding: 0 15px;
     }
+
+    &__slide {
+        height: auto !important;
+    }
 }
 
 .rewiew {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     background-color: rgba(255, 255, 255, 0.09);
     padding: 30px;
     border: 1px solid #fff;
     border-radius: 35px;
+    height: 100%;
 
     &__title {
         font-weight: 600;
@@ -38,21 +47,20 @@
         line-height: 100%;
         letter-spacing: 0.3px;
         text-transform: capitalize;
-        margin-bottom: 15px;
     }
 
     &__desc {
         font-weight: 400;
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.3;
         letter-spacing: 0.2px;
-        margin-bottom: 15px;
     }
 
     &__info {
         display: flex;
         align-items: center;
         gap: 15px;
+        margin-top: auto;
     }
 
     &__image {
@@ -66,8 +74,12 @@
         border-radius: 15px;
         overflow: hidden;
 
-        img {
-            width: 100%;
+        &--3 {
+            background-color: #b769a7;
+        }
+
+        &--5 {
+            background-color: #140f13;
         }
     }
 
@@ -81,7 +93,7 @@
     &__role {
         font-family: Alexandria;
         font-weight: 400;
-        font-size: 15.2px;
+        font-size: 15px;
         letter-spacing: 0.5px;
     }
 }
