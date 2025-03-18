@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { Banner, Container, Title } from "@/components/shared";
+import { Banner, div, Title } from "@/components/shared";
 import { Reviews } from "@/components/shared/reviews";
 import { Button } from "@/components/ui";
 
@@ -8,15 +8,15 @@ export default function Site() {
     return (
         <>
             <Banner title="What Types Of Websites Do We Offer?" />
-            <Container className="">
+            <div className="container">
                 <p className="text-center text-sm font-light mb-8">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor <br /> incididunt ut labore et dolore
                     magna aliqua. 
                 </p>
-            </Container>
-            <section className="py-16">
-                <Container className="grid grid-cols-2 gap-6">
+            </div>
+            <section className="section">
+                <div className="container grid grid-cols-2 gap-6">
                     <div className="site-type">
                         <Title
                             size="lg"
@@ -32,7 +32,11 @@ export default function Site() {
                             reprehenderit in voluptate velit esse cillum dolore
                             eu fugiat nulla pariatur.
                         </p>
-                        <img src="./../images/card.png" className="site-type__img site-type__img--1" alt="" />
+                        <img
+                            src="./../images/card.png"
+                            className="site-type__img site-type__img--1"
+                            alt=""
+                        />
                     </div>
                     <div className="site-type">
                         <Title
@@ -49,7 +53,11 @@ export default function Site() {
                             reprehenderit in voluptate velit esse cillum dolore
                             eu fugiat nulla pariatur.
                         </p>
-                        <img src="./../images/folder.png" className="site-type__img site-type__img--2" alt="" />
+                        <img
+                            src="./../images/folder.png"
+                            className="site-type__img site-type__img--2"
+                            alt=""
+                        />
                     </div>
                     <div className="site-type">
                         <Title
@@ -66,7 +74,11 @@ export default function Site() {
                             reprehenderit in voluptate velit esse cillum dolore
                             eu fugiat nulla pariatur.
                         </p>
-                        <img src="./../images/megaphone.png" className="site-type__img site-type__img--3" alt="" />
+                        <img
+                            src="./../images/megaphone.png"
+                            className="site-type__img site-type__img--3"
+                            alt=""
+                        />
                     </div>
                     <div className="site-type">
                         <Title
@@ -83,12 +95,16 @@ export default function Site() {
                             reprehenderit in voluptate velit esse cillum dolore
                             eu fugiat nulla pariatur.
                         </p>
-                        <img src="./../images/cart.png" className="site-type__img site-type__img--4" alt="" />
+                        <img
+                            src="./../images/cart.png"
+                            className="site-type__img site-type__img--4"
+                            alt=""
+                        />
                     </div>
-                </Container>
+                </div>
             </section>
-            <section className="py-16">
-                <Container className="">
+            <section className="section">
+                <div className="container">
                     <h2 className="text-center text-[40px] mb-2">
                         İş mərhələlərimiz
                     </h2>
@@ -96,10 +112,10 @@ export default function Site() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do <br /> eiusmod tempor incididunt ut labore qua. 
                     </p>
-                </Container>
+                </div>
             </section>
-            <section className="py-16">
-                <Container className="">
+            <section className="section">
+                <div className="container">
                     <h2 className="text-center text-[40px] mb-2">
                         Download To Know More!
                     </h2>
@@ -113,7 +129,7 @@ export default function Site() {
                     >
                         Download Presentation
                     </Button>
-                </Container>
+                </div>
             </section>
             <Reviews />
         </>

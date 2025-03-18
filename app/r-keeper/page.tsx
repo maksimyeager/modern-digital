@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { Banner, Container, Title } from "@/components/shared";
+import { Banner } from "@/components/shared";
 
 const r_keeper_data = [
     {
@@ -36,15 +36,11 @@ export default function RKeeper() {
     return (
         <>
             <Banner title="r_keeper" />
-            <section>
-                <Container className="flex gap-4">
-                    <div className="flex flex-col max-w-[650px] w-full p-12 bg-[#160A2E] rounded-[43px]">
-                        <Title
-                            text={"About our program "}
-                            size="lg"
-                            className="mb-4 text-[32px] font-medium"
-                        />
-                        <p className="text-[15px] text-white font-light mb-4">
+            <section className="r_keeper__info">
+                <div className="container">
+                    <div className="r_keeper__info-desc">
+                        <h2>About our program</h2>
+                        <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -56,37 +52,26 @@ export default function RKeeper() {
                             deserunt mollit anim id est laborum.
                         </p>
                     </div>
-                    <div>
-                        <img
-                            src="/images/r-keeper.png"
-                            alt=""
-                            className="rounded-[43px] h-full w-full object-cover"
-                        />
+                    <div className="r_keeper__info-img">
+                        <img src="/images/r-keeper.png" alt="" className="" />
                     </div>
-                </Container>
+                </div>
             </section>
-            <section className="py-16">
-                <Container className="">
-                    <h2 className="text-center text-[40px] mb-8">
-                        В r_keeper есть всё для:
-                    </h2>
-                    <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-5">
+            <section className="section r_keeper__data">
+                <div className="container">
+                    <h2>В r_keeper есть всё для:</h2>
+                    <div className="r_keeper__data-wrapper">
                         {r_keeper_data.map((item, index) => (
-                            <div
-                                key={index}
-                                className="w-full flex gap-4 items-center border rounded-2xl py-4 px-8"
-                            >
-                                <span className="text-[#01F59D] font-medium text-[32px]">
-                                    {index + 1}
-                                </span>
+                            <div key={index} className="r_keeper__data-block">
+                                <span>{index + 1}</span>
                                 <p>{item.name}</p>
                             </div>
                         ))}
                     </div>
-                </Container>
+                </div>
             </section>
-            <section className="py-16 possibilities">
-                <Container>
+            <section className="section possibilities">
+                <div className="container">
                     <div className="possibilities__info">
                         <h2>Возможности продукта</h2>
                         <p>Модули продукта r_keeper для ресторанного бизнеса</p>
@@ -165,7 +150,7 @@ export default function RKeeper() {
                             </div>
                         </div>
                     </div>
-                </Container>
+                </div>
             </section>
         </>
     );

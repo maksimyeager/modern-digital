@@ -11,16 +11,16 @@ interface Props {
     className?: string;
 }
 
-export const Footer: React.FC<Props> = ({ className }) => {
+export const Footer: React.FC<Props> = () => {
     return (
-        <footer className={cn("pt-24 pb-16 relative", className)}>
-            <Container className="flex gap-8 sm:gap-24 flex-wrap flex-col sm:flex-row items-center sm:items-start">
+        <footer className="footer">
+            <div className="container">
                 <img
                     src="/images/absolute.png"
                     alt="Absolute Logo"
-                    className="absolute z-0 bottom-0 right-0 sm:w-[300px] w-[220px]"
+                    className="footer__absolute-logo"
                 />
-                <div className="flex flex-col max-w-[280px] w-full md:mr-16">
+                <div className="footer__logo">
                     <Link href={"/"}>
                         <img
                             src={"/images/logo-1.png"}
@@ -28,14 +28,14 @@ export const Footer: React.FC<Props> = ({ className }) => {
                             className="w-full"
                         />
                     </Link>
-                    <div className="mt-8 flex flex-col gap-2">
-                        <div className="flex bg-white rounded-lg p-2 items-center gap-4">
+                    <div className="footer__contacts">
+                        <div className="footer__contacts-block">
                             <BiSolidEnvelope color="#5800FF" size={24} />
                             <span className="text-[#131312]">
                                 Example@gmail.com
                             </span>
                         </div>
-                        <div className="flex bg-white rounded-lg p-2 items-center gap-4">
+                        <div className="footer__contacts-block">
                             <FaPhoneAlt color="#5800FF" size={20} />
                             <span className="text-[#131312]">
                                 +777 77 777 77
@@ -43,8 +43,8 @@ export const Footer: React.FC<Props> = ({ className }) => {
                         </div>
                     </div>
                 </div>
-                <div className="text-center sm:text-start">
-                    <Title text={"Our Links"} size="lg" className="mb-6" />
+                <div className="footer__block">
+                    <h2>Our Links</h2>
                     <ul className="flex flex-col gap-4 text-lg font-light">
                         <li>
                             <Link href={"/blog"}>Blog</Link>
@@ -54,8 +54,8 @@ export const Footer: React.FC<Props> = ({ className }) => {
                         </li>
                     </ul>
                 </div>
-                <div className="text-center sm:text-start">
-                    <Title text={"Our Services"} size="lg" className="mb-6" />
+                <div className="footer__block">
+                    <h2>Our Services</h2>
                     <ul className="flex flex-col gap-4 text-lg font-light">
                         <li>
                             <Link href={"/site"}>Sayt</Link>
@@ -66,12 +66,24 @@ export const Footer: React.FC<Props> = ({ className }) => {
                         <li>
                             <Link href={"/design"}>Dizayn</Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link href={"/tacir-pro"}>tacir.pro</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
-            </Container>
+                <div className="footer__contacts footer__contacts--mobile">
+                    <div className="footer__contacts-block">
+                        <BiSolidEnvelope color="#5800FF" size={24} />
+                        <span className="text-[#131312]">
+                            Example@gmail.com
+                        </span>
+                    </div>
+                    <div className="footer__contacts-block">
+                        <FaPhoneAlt color="#5800FF" size={20} />
+                        <span className="text-[#131312]">+777 77 777 77</span>
+                    </div>
+                </div>
+            </div>
         </footer>
     );
 };

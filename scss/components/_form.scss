@@ -1,14 +1,14 @@
 .form {
     width: 100%;
-    padding: 50px;
+    padding: 40px;
     padding-bottom: 30px;
     border-radius: 43px;
     border: 1px solid #fff;
 
-    @media (max-width: 640px) {
-        border-radius: 30px;
-        padding: 30px;
-        padding-bottom: 20px;
+    @media (max-width: 576px) {
+        border-radius: 23px;
+        padding: 25px;
+        padding-bottom: 30px;
     }
 
     &__block {
@@ -22,30 +22,57 @@
             flex-direction: row;
             gap: 15px;
 
-            @media (max-width: 640px) {
+            @media (max-width: 576px) {
                 gap: 0;
                 flex-direction: column;
             }
         }
+
+        label {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 10px;
+
+            @media (max-width: 576px) {
+                font-size: 18px;
+            }
+        }
+
+        input,
+        textarea {
+            // bg-[#322847] text-white text-[15px] font-normal py-3 px-4 rounded-[16px]
+            background-color: #322847;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 12px 18px;
+            border-radius: 16px;
+        }
+
+        textarea {
+            // bg-[#322847] text-white text-[15px] font-normal py-3 px-4 rounded-[24px] h-[110px] resize-none
+            resize: none;
+            height: 100px;
+            border-radius: 24px;
+        }
     }
 
     &__button {
-        display: flex;
         margin: 0 auto;
+        margin-top: 30px;
         width: 150px;
-        border-radius: 15px;
-        padding-block: 10px;
+        height: 45px;
+        border-radius: 20px;
         box-shadow: 0px 0px 18.5px 0px #5800ff9e;
         font-size: 15px;
     }
 
-    input{
-
-        &::placeholder{
+    input {
+        &::placeholder {
             color: rgba(255, 255, 255, 0.15);
         }
 
-        &:focus{
+        &:focus {
             border: none;
         }
     }

@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "@/components/shared";
-import { cn } from "@/lib/utils";
 import { Button } from "../ui";
 import { FiArrowUpRight } from "react-icons/fi";
 
@@ -8,9 +7,9 @@ interface Props {
     className?: string;
 }
 
-export const HomeBanner: React.FC<Props> = ({ className }) => {
+export const HomeBanner: React.FC<Props> = () => {
     return (
-        <div className={cn("home-banner px-4 mb-8", className)}>
+        <div className="home-banner">
             <Container className="flex gap-4">
                 <div className="home-banner__left">
                     <img src="./images/home-banner-1.png" alt="" />
@@ -32,12 +31,14 @@ export const HomeBanner: React.FC<Props> = ({ className }) => {
                 <div className="home-banner__right">
                     <div className="w-[130px]">
                         <p className="text-[64px] font-normal flex gap-2 leading-none">
-                            98{" "}
+                            4{" "}
                             <span className="mt-[10px] text-[32px] text-secondary font-bold">
-                                %
+                                +
                             </span>
                         </p>
-                        <p className="text-[14px] font-light">Happy Clients</p>
+                        <p className="text-[14px] font-light">
+                            Years Experience{" "}
+                        </p>
                     </div>
                     <div className="">
                         <p className="text-[64px] font-normal flex gap-2 leading-none">
@@ -50,12 +51,12 @@ export const HomeBanner: React.FC<Props> = ({ className }) => {
                     </div>
                     <div className="">
                         <p className="text-[64px] font-normal flex gap-2 leading-none">
-                            98{" "}
+                            30{" "}
                             <span className="mt-[10px] text-[32px] text-secondary font-bold">
-                                %
+                                +
                             </span>
                         </p>
-                        <p className="text-[14px] font-light">Happy Clients</p>
+                        <p className="text-[14px] font-light">Websites</p>
                     </div>
                 </div>
             </Container>

@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import React from "react";
 import { RewiewSlider } from "./review-slider";
 
@@ -6,15 +5,14 @@ interface Props {
     className?: string;
 }
 
-export const Reviews: React.FC<Props> = ({ className }) => {
+export const Reviews: React.FC<Props> = () => {
     return (
-        <section className={cn("py-16", className)}>
-            <h2 className="text-center text-[40px] mb-2">
-                Müştərilərimizin rəyləri
-            </h2>
-            <p className="text-center text-sm font-light mb-8">
-                Lorem ipsum dolor sit adipiscing elit, sed do eiusmod tempor{" "}
-                <br /> incididunt ut labore. 
+        <section className="section section--rewiews">
+            <h2 className="section__title">Müştərilərimizin rəyləri</h2>
+            <p className="section__subtitle">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor <br />
+                incididunt ut labore et dolore magna aliqua. 
             </p>
             <RewiewSlider />
         </section>

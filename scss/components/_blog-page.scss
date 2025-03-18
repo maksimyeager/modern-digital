@@ -53,8 +53,12 @@
 
     &__image {
         background-color: #e5e5e6;
-        border-radius: 40px;
+        border-radius: clamp(1.438rem, -0.785rem + 4.63vw, 2.688rem);
         overflow: hidden;
+
+        @media (max-width: 768px) {
+            border-radius: 23px;
+        }
 
         img {
             width: 100%;
@@ -67,9 +71,13 @@
         &-top {
             padding-bottom: 15px;
             h2 {
-                font-size: 32px;
+                font-size: 36px;
                 font-weight: 600;
                 margin-bottom: 10px;
+
+                @media (max-width: 576px) {
+                    font-size: 26px;
+                }
             }
         }
 

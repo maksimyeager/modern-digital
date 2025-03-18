@@ -9,14 +9,10 @@ interface Props {
 
 export const Banner: React.FC<Props> = ({ className, title }) => {
     return (
-        <div className={cn("px-4 mb-8", className)}>
-            <Container className="border bg-transparent py-16 rounded-[43px]">
-                <Title
-                    text={title}
-                    size="xl"
-                    className="font-normal text-center"
-                />
-            </Container>
+        <div className={cn("banner", className)}>
+            <div className="container">
+                <h1>{title}</h1>
+            </div>
         </div>
     );
 };

@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { Container } from "@/components/shared";
 import { Banner } from "@/components/shared";
 import { FaCheck } from "react-icons/fa6";
 import { Title } from "@/components/shared/title";
-import { Button } from "@/components/ui";
 
 const tacir_pro_data = [
     {
@@ -46,7 +44,7 @@ export default function TacirPro() {
         <>
             <Banner title="Tacir.Pro" />
             <section>
-                <Container className="flex md:flex-row flex-col gap-4">
+                <div className="container flex md:flex-row flex-col gap-4">
                     <div className="flex flex-col md:max-w-[650px] w-full md:p-12 p-8 bg-[#160A2E] rounded-[43px]">
                         <Title
                             text={"About our program "}
@@ -84,10 +82,10 @@ export default function TacirPro() {
                             className="rounded-[43px] h-full object-cover"
                         />
                     </div>
-                </Container>
+                </div>
             </section>
-            <section className="py-16">
-                <Container className="">
+            <section className="section">
+                <div className="container">
                     <h2 className="text-center text-[40px] mb-2">
                         Funksionallıq
                     </h2>
@@ -102,16 +100,20 @@ export default function TacirPro() {
                                 className="w-full max-w-[360px] flex gap-4 items-center border rounded-2xl py-4 px-8"
                             >
                                 <div>
-                                    <img src="/images/box.svg" alt="" />
+                                    <img
+                                        src="/images/box.svg"
+                                        alt=""
+                                        className="resize-none!"
+                                    />
                                 </div>
                                 <p>{item.name}</p>
                             </div>
                         ))}
                     </div>
-                </Container>
+                </div>
             </section>
-            <section className="py-16">
-                <Container className="">
+            <section className="section">
+                <div className="container">
                     <h2 className="text-center text-[40px] mb-2">
                         Click Here To Know More
                     </h2>
@@ -119,13 +121,10 @@ export default function TacirPro() {
                         Lorem ipsum dolor sit adipiscing elit, sed do eiusmod
                         tempor <br /> incididunt ut labore. 
                     </p>
-                    <Button
-                        variant={"default"}
-                        className="block  w-[220px] h-[50px] mx-auto rounded-[18px]"
-                    >
+                    <a href="https://tacir.pro/" className="link-1">
                         Open Tacir.PRO website
-                    </Button>
-                </Container>
+                    </a>
+                </div>
             </section>
         </>
     );

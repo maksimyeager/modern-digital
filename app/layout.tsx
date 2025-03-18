@@ -25,9 +25,7 @@ export default function RootLayout({
             <head>
                 <link rel="shortcut icon" href="./logo.png" />
             </head>
-            <body
-                className={cn("bg-[#0E0227] text-white", alexandria.variable)}
-            >
+            <body className={cn("", alexandria.variable)}>
                 <Header />
                 {children}
                 <Footer />

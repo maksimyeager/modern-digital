@@ -13,13 +13,27 @@ interface Props {
 
 export const RewiewSlider: React.FC<Props> = () => {
     return (
-        <div className="">
+        <div className="rewiew-slider__wrapper">
             <Swiper
                 className="rewiew-slider w-full"
-                slidesPerView={3.5}
+                slidesPerView={1}
                 spaceBetween={30}
                 loop={true}
                 modules={[Navigation, Pagination]}
+                breakpoints={{
+                    768: {
+                        slidesPerView: 1,
+                    },
+                    900: {
+                        slidesPerView: 2,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                    },
+                    1560: {
+                        slidesPerView: 4,
+                    },
+                }}
             >
                 <SwiperSlide>
                     <Review />

@@ -1,11 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { Container } from "@/components/shared";
-import { Button } from "@/components/ui";
-import Link from "next/link";
 import { FaCalendar } from "react-icons/fa";
-import { FiArrowUpRight } from "react-icons/fi";
 import { IoIosShareAlt } from "react-icons/io";
 
 export default function BlogPage() {
@@ -26,7 +22,7 @@ export default function BlogPage() {
 
     return (
         <div className="blog-page">
-            <Container>
+            <div className="container">
                 <div className="blog-page__top">
                     <div className="blog-page__image">
                         <img src={"./../../images/image.png"} alt="" />
@@ -80,7 +76,7 @@ export default function BlogPage() {
                         <img src={"./../../images/image.png"} alt="" />
                     </div>
                 </div>
-            </Container>
+            </div>
         </div>
     );
 }
