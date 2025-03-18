@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { Banner } from "@/components/shared";
 import { FaCheck } from "react-icons/fa6";
 import { Title } from "@/components/shared/title";

@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 import { Banner } from "@/components/shared";
 
 const r_keeper_data = [
