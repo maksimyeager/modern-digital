@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { FiArrowUpRight } from "react-icons/fi";
+import { Swiper as SwiperCore } from "swiper";
 
 interface Props {
     className?: string;
@@ -12,7 +13,7 @@ interface Props {
 
 export const HomeSlider: React.FC<Props> = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const swiperRef = useRef<any>(null);
+    const swiperRef = useRef<SwiperCore | null>(null);
 
     const handleSlideChange = (index: number) => {
         setActiveIndex(index);
