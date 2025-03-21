@@ -1,10 +1,73 @@
 .home-banner {
-    padding: 0 15px;
     margin-bottom: 30px;
-    
+
+    &__wrapper {
+        display: flex;
+        gap: 15px;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &__wrapper--mobile {
+        display: none;
+        max-width: 750px;
+        margin: 0 auto;
+
+        @media (max-width: 1024px) {
+            display: block;
+        }
+
+        .home-banner__bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .home-banner__center {
+            &-img--1 {
+                @media (max-width: 576px) {
+                    display: none;
+                }
+            }
+
+            &-img--2 {
+                display: none;
+                @media (max-width: 576px) {
+                    display: block;
+                }
+            }
+
+            a.link-1 {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: calc(100% - 537px);
+                padding: 24px 0;
+                border-radius: 15px;
+
+                @media (max-width: 576px) {
+                    width: calc(100% - 537px);
+                }
+            }
+        }
+    }
+
     &__left {
         padding-top: 20px;
         max-width: 275px;
+
+        h2 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 300;
+        }
     }
 
     &__center {
@@ -12,10 +75,13 @@
         position: relative;
         height: fit-content;
 
-        button {
+        a.link-1 {
             position: absolute;
             bottom: 0;
             right: 0;
+            width: calc(100% - 537px);
+            padding: 24px 0;
+            border-radius: 15px;
         }
     }
 
@@ -24,5 +90,24 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        &-wrapper {
+            width: 130px;
+        }
+
+        &-data {
+            font-size: 64px;
+            font-weight: 400;
+            display: flex;
+            gap: 8px;
+            line-height: 1;
+
+            span {
+                margin-top: 10px;
+                font-size: 32px;
+                color: #01f59d;
+                font-weight: 700;
+            }
+        }
     }
 }

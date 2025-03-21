@@ -3,8 +3,16 @@
     padding: 40px;
     padding-bottom: 30px;
     border-radius: 43px;
-    border: 1px solid #fff;
-
+    background: linear-gradient(#0e0227, #0e0227) padding-box,
+        linear-gradient(
+                92.36deg,
+                rgba(255, 255, 255, 0.93) 12.67%,
+                rgba(155, 155, 155, 0.24) 59.57%,
+                rgba(255, 255, 255, 0.93) 99.77%
+            )
+            border-box;
+    border: 1px solid transparent;
+    
     @media (max-width: 576px) {
         border-radius: 23px;
         padding: 25px;

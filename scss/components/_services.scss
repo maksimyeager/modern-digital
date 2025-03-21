@@ -1,0 +1,17 @@
+.section--services {
+    .section__title {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 30px;
+
+        span{
+            //  className="font-semibold text-secondary"
+            font-weight: 600;
+            color: #01F59D;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 28px;
+        }
+    }
+}

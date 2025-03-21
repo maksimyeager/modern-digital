@@ -4,6 +4,7 @@ import { Header, Footer } from "@/components/shared";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import "./../scss/app.scss";
+import I18nProvider from "@/components/providers/i18n-provider";
 
 const alexandria = Alexandria({
     subsets: ["latin"],
@@ -26,9 +27,11 @@ export default function RootLayout({
                 <link rel="shortcut icon" href="./logo.png" />
             </head>
             <body className={cn("", alexandria.variable)}>
-                <Header />
-                {children}
-                <Footer />
+                <I18nProvider>
+                    <Header />
+                    {children}
+                    <Footer />
+                </I18nProvider>
             </body>
         </html>
     );

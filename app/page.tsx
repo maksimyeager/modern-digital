@@ -11,17 +11,9 @@ export default function Home() {
             <HomeBanner />
             <section className="section section--services">
                 <div className="container">
-                    <h2 className="text-center text-[40px]">
-                        Sizə Təklif Etdiyimiz{" "}
-                        <span className="font-semibold text-secondary">
-                            Xidmətlərimiz
-                        </span>
+                    <h2 className="section__title">
+                        Sizə Təklif Etdiyimiz <span>Xidmətlərimiz</span>
                     </h2>
-                    <p className="text-center text-sm font-light mb-8">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor <br /> incididunt ut labore et
-                        dolore magna aliqua. 
-                    </p>
                     <HomeSlider />
                 </div>
             </section>
@@ -30,14 +22,66 @@ export default function Home() {
                     <div className="section__head">
                         <h2>Our Blog</h2>
                         <div className="section__link-wrapper">
-                            <Link href={"/"} className="blog__link link-3">
+                            <Link href={"/blogs"} className="blog__link link-3">
                                 See More Blogs <FiArrowUpRight size={20} />
                             </Link>
                         </div>
                     </div>
                     <div className="blogs__wrapper">
-                        <div className="blogs__col blogs__col--1"></div>
-                        <div className="blogs__col blogs__col--2"></div>
+                        <div className="blogs__col blogs__col--1">
+                            <div className="home-blog">
+                                <div className="home-blog__img">
+                                    <img
+                                        src="./images/home-blog/home-blog-1.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="home-blog__info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut et dolore magna aliqua.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="blogs__col blogs__col--2">
+                            <div className="home-blog">
+                                <div className="home-blog__img">
+                                    <img
+                                        src="./images/home-blog/home-blog-2.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="home-blog__info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut et dolore magna aliqua.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="home-blog">
+                                <div className="home-blog__img">
+                                    <img
+                                        src="./images/home-blog/home-blog-3.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="home-blog__info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut et dolore magna aliqua.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="section__link-wrapper section__link-wrapper--mobile">
+                        <Link href={"/blogs"} className="blog__link link-3">
+                            See More Blogs <FiArrowUpRight size={20} />
+                        </Link>
                     </div>
                 </div>
             </section>

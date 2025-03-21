@@ -7,31 +7,102 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 30px;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
 
         h2 {
             font-weight: 400;
             font-size: 40px;
             text-transform: capitalize;
+
+            @media (max-width: 768px) {
+                font-size: 28px;
+                text-align: center;
+            }
+        }
+    }
+    .section__link-wrapper {
+        max-width: 233px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            display: none;
         }
 
-        .section__link-wrapper {
-            max-width: 233px;
+        a {
+            width: 210px;
+            height: 51px;
+            background: transparent;
+            background: linear-gradient(#0e0227, #0e0227) padding-box,
+                linear-gradient(90deg, #5800ff 0%, #350099 100%) border-box;
+            border: 3px solid transparent;
+            text-transform: capitalize;
+
+            &:hover {
+                width: 100%;
+                border: 2.55px solid #01f59d;
+                box-shadow: 0px 0px 15.74px 0px #01f59d;
+            }
+        }
+
+        &--mobile {
+            display: none;
+
+            @media (max-width: 768px) {
+                display: block;
+                margin: 30px auto 0;
+            }
+        }
+    }
+
+    .blogs__wrapper {
+        display: flex;
+        gap: 15px;
+    }
+
+    .blogs__col--1 {
+    }
+    .blogs__col--2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .home-blog {
+        position: relative;
+        &__img {
             width: 100%;
-            display: flex;
-            justify-content: center;
+            height: 100%;
+            overflow: hidden;
+            border-radius: clamp(1.438rem, -0.785rem + 4.63vw, 2.688rem);
 
-            a {
-                width: 210px;
-                height: 51px;
-                background: transparent;
-                box-shadow: 0px 0px 15.74px 0px #5800ff9e;
-                border: 2.55px solid #5800ff;
-                text-transform: capitalize;
+            @media (max-width: 768px) {
+                border-radius: 23px;
+            }
 
-                &:hover {
-                    width: 100%;
-                    border: 2.55px solid #01f59d;
-                    box-shadow: 0px 0px 15.74px 0px #01f59d;
+            img {
+                width: 100%;
+            }
+        }
+
+        &__info {
+            position: absolute;
+
+            p {
+                line-height: 1.2;
+                padding: 0 30px;
+
+                @media (max-width: 768px) {
+                    font-size: 15px;
                 }
             }
         }

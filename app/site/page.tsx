@@ -1,11 +1,15 @@
-import { Banner } from "@/components/shared";
 import { Reviews } from "@/components/shared/reviews";
-import { Button } from "@/components/ui";
 
 export default function Site() {
     return (
         <>
-            <Banner title="What Types Of Websites Do We Offer?" />
+            <div className="banner">
+                <div className="container">
+                    <h1>
+                        What Types Of <span>Websites</span> Do We Offer?
+                    </h1>
+                </div>
+            </div>
             <div className="container">
                 <p className="sites__desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -71,7 +75,6 @@ export default function Site() {
                     </div>
                     <div className="site-type">
                         <h2>Онлайн магазин</h2>
-
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
@@ -89,32 +92,109 @@ export default function Site() {
                     </div>
                 </div>
             </section>
-            <section className="section">
+            <section className="section section--stages">
                 <div className="container">
-                    <h2 className="text-center text-[40px] mb-2">
-                        İş mərhələlərimiz
-                    </h2>
-                    <p className="text-center text-sm font-light mb-8">
+                    <h2 className="section__title">İş mərhələlərimiz</h2>
+                    <p className="section__desc">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do <br /> eiusmod tempor incididunt ut labore qua. 
                     </p>
+
+                    <div className="stages__wrapper">
+                        <div className="stages__row stages__row--1">
+                            <div className="stage">
+                                <div className="stage__number">1</div>
+                                <div className="stage__info">
+                                    <h2 className="stage__title">Brifinq</h2>
+                                    <p className="stage__desc">
+                                        Şirkət ilə görüş təyin edib, fəaliyyəti
+                                        və tarixçəsi ilə tanış olunur.
+                                        Müştərinin istəkləri və gözləntiləri
+                                        qeyd olunur.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="stage">
+                                <div className="stage__number">2</div>
+                                <div className="stage__info">
+                                    <h2 className="stage__title">
+                                        Texniki təklif
+                                    </h2>
+                                    <p className="stage__desc">
+                                        Brifinq əsasında, bizim tərəfimizdən
+                                        saytın funksiyonallığı barədə texniki
+                                        təklif hazırlanır.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="stage">
+                                <div className="stage__number">3</div>
+                                <div className="stage__info">
+                                    <h2 className="stage__title">
+                                        Müqavilə və texniki Tapşırıq
+                                    </h2>
+                                    <p className="stage__desc">
+                                        Bütün məsələləri müzakirə etdikdən sonra
+                                        texniki tapşırıq və müqavilə hazırlanır.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="stages__row stages__row--2">
+                            <div className="stage">
+                                <div className="stage__number">4</div>
+                                <div className="stage__info">
+                                    <h2 className="stage__title">UI dizayn</h2>
+                                    <p className="stage__desc">
+                                        Texniki tapşırıq əsasında saytın “Demo
+                                        versiyası” 7 iş günü ərzindı hazırlanır.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="stage">
+                                <div className="stage__number">5</div>
+                                <div className="stage__info">
+                                    <h2 className="stage__title">
+                                        Saytın Yazılması
+                                    </h2>
+                                    <p className="stage__desc">
+                                        UI Dizayn təsdiqləndiqdən sonra, saytın
+                                        sıfırdan kod vasitəsi ilə yazılması
+                                        başlayır.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="stage">
+                                <div className="stage__number stage__number--final">
+                                    <img src="../images/flag.svg" alt="" />
+                                </div>
+                                <div className="stage__info">
+                                    <h2 className="stage__title">ödəniş</h2>
+                                    <p className="stage__desc">
+                                        50% ilkin ödəniş etdikdən sonra iş
+                                        prosessi başlayır. Layihə təhvil
+                                        verildikdən sonra qalan 50% ödənilir.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section className="section">
+            <section className="section section--presentation">
                 <div className="container">
-                    <h2 className="text-center text-[40px] mb-2">
-                        Download To Know More!
-                    </h2>
-                    <p className="text-center text-sm font-light mb-8">
+                    <h2 className="section__title">Download To Know More!</h2>
+                    <p className="section__desc">
                         Lorem ipsum dolor sit adipiscing elit, sed do eiusmod
                         tempor <br /> incididunt ut labore. 
                     </p>
-                    <Button
+                    <button>Dowland Presentation</button>
+                    {/* <Button
                         variant={"default"}
                         className="block  w-[220px] h-[50px] mx-auto rounded-[18px]"
                     >
                         Download Presentation
-                    </Button>
+                    </Button> */}
                 </div>
             </section>
             <Reviews />

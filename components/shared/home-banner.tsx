@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "../ui";
 import { FiArrowUpRight } from "react-icons/fi";
+import Link from "next/link";
 
 interface Props {
     className?: string;
@@ -9,53 +9,101 @@ interface Props {
 export const HomeBanner: React.FC<Props> = () => {
     return (
         <div className="home-banner">
-            <div className="container flex gap-4">
-                <div className="home-banner__left">
-                    <img src="./images/home-banner-1.png" alt="" />
-                    <p>
-                        Set error sit voluptatem iste accusan aperiam, eaque
-                        ipsa quae ab illoperspiciatis unde omnis iste natus
-                        error sit voluptatem accusantium ...
-                    </p>
-                </div>
-                <div className="home-banner__center">
-                    <img src="./images/home-banner-2.png" alt="" />
-                    <Button
-                        variant={"default"}
-                        className="w-[210px] py-6 rounded-[20px]"
-                    >
-                        Read More <FiArrowUpRight className="ml-4" size={20} />
-                    </Button>
-                </div>
-                <div className="home-banner__right">
-                    <div className="w-[130px]">
-                        <p className="text-[64px] font-normal flex gap-2 leading-none">
-                            4{" "}
-                            <span className="mt-[10px] text-[32px] text-secondary font-bold">
-                                +
-                            </span>
-                        </p>
-                        <p className="text-[14px] font-light">
-                            Years Experience{" "}
+            <div className="container">
+                <div className="home-banner__wrapper">
+                    <div className="home-banner__left">
+                        <img src="./images/home-banner-1.png" alt="" />
+
+                        <h2>r_keeper</h2>
+                        <p>
+                            Dünyaca tanınmış r_keeper proqram təminatının
+                            Azərbaycan Respublikasında ki, rəsmi nümayəndəsi
+                            olmağın müjdəsini sizin ilə paylaşmaq istəyirik.
+                            Ətraflı məlumatlar üçün bizi izləməyi unutmayın!
                         </p>
                     </div>
-                    <div className="">
-                        <p className="text-[64px] font-normal flex gap-2 leading-none">
-                            98{" "}
-                            <span className="mt-[10px] text-[32px] text-secondary font-bold">
-                                %
-                            </span>
-                        </p>
-                        <p className="text-[14px] font-light">Happy Clients</p>
+                    <div className="home-banner__center">
+                        <img src="./images/home-banner-2.png" alt="" />
+                        <Link href={"/site"} className="link-1">
+                            Read More{" "}
+                            <FiArrowUpRight className="ml-4" size={20} />
+                        </Link>
                     </div>
-                    <div className="">
-                        <p className="text-[64px] font-normal flex gap-2 leading-none">
-                            30{" "}
-                            <span className="mt-[10px] text-[32px] text-secondary font-bold">
-                                +
-                            </span>
-                        </p>
-                        <p className="text-[14px] font-light">Websites</p>
+                    <div className="home-banner__right">
+                        <div className="home-banner__right-wrapper">
+                            <p className="home-banner__right-data">
+                                4 <span>+</span>
+                            </p>
+                            <p className="text-[14px] font-light">
+                                Years Experience{" "}
+                            </p>
+                        </div>
+                        <div className="">
+                            <p className="home-banner__right-data">
+                                98 <span>%</span>
+                            </p>
+                            <p className="text-[14px] font-light">
+                                Happy Clients
+                            </p>
+                        </div>
+                        <div className="">
+                            <p className="home-banner__right-data">
+                                30 <span>+</span>
+                            </p>
+                            <p className="text-[14px] font-light">Websites</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="home-banner__wrapper--mobile">
+                    <div className="home-banner__top">
+                        <div className="home-banner__center">
+                            <img className="home-banner__center-img home-banner__center-img--1" src="./images/home-banner-2.png" alt="" />
+                            <img className="home-banner__center-img home-banner__center-img--2" src="./images/home-banner-3.png" alt="" />
+                            <Link href={"/site"} className="link-1">
+                                Read More{" "}
+                                <FiArrowUpRight className="ml-4" size={20} />
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="home-banner__bottom">
+                        <div className="home-banner__left">
+                            <img src="./images/home-banner-1.png" alt="" />
+
+                            <h2>r_keeper</h2>
+                            <p>
+                                Dünyaca tanınmış r_keeper proqram təminatının
+                                Azərbaycan Respublikasında ki, rəsmi nümayəndəsi
+                                olmağın müjdəsini sizin ilə paylaşmaq istəyirik.
+                                Ətraflı məlumatlar üçün bizi izləməyi unutmayın!
+                            </p>
+                        </div>
+
+                        <div className="home-banner__right">
+                            <div className="home-banner__right-wrapper">
+                                <p className="home-banner__right-data">
+                                    4 <span>+</span>
+                                </p>
+                                <p className="text-[14px] font-light">
+                                    Years Experience{" "}
+                                </p>
+                            </div>
+                            <div className="">
+                                <p className="home-banner__right-data">
+                                    98 <span>%</span>
+                                </p>
+                                <p className="text-[14px] font-light">
+                                    Happy Clients
+                                </p>
+                            </div>
+                            <div className="">
+                                <p className="home-banner__right-data">
+                                    30 <span>+</span>
+                                </p>
+                                <p className="text-[14px] font-light">
+                                    Websites
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

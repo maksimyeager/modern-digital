@@ -1,10 +1,11 @@
 .subscribe {
     position: relative;
     width: 100%;
-    background: #24193a;
+    background: linear-gradient(#24193a, #24193a) padding-box,
+        linear-gradient(90deg, #5800ff 0%, #01f59d 100%) border-box;
     padding: 48px;
     border-radius: 43px;
-    border: 1px solid #fff;
+    border: 3px solid transparent;
     z-index: 20;
 
     @media (max-width: 768px) {
@@ -29,12 +30,10 @@
         h2 {
             font-size: 40px;
             padding-left: 48px;
+            margin-top: auto;
 
             @media (max-width: 768px) {
                 padding-left: 27px;
-            }
-
-            @media (max-width: 576px) {
                 font-size: 28px;
             }
 
@@ -46,12 +45,10 @@
     }
 
     &__img {
-        position: absolute;
-        top: calc(-100% - 110px);
-        right: 5%;
-
+        position: relative;
+        width: 400px;
+        height: max-content;
         img {
-            width: 400px;
         }
     }
 
