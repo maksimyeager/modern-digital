@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button } from "../ui";
 import Link from "next/link";
 import Image from "next/image";
 import { MobileNavbar } from "./mobile-navbar";
