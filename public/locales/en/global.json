@@ -1,5 +1,22 @@
 {
-    "greeting": "Hello, {name}!",
-    "description": "This is a multi-language website."
-  }
-  
+    "header": {
+        "site": "Site",
+        "r-keeper": "r_keeper",
+        "blog": "Blog",
+        "contact-us": "Contact Us"
+    },
+    "mobile-navbar": {
+        "site": "Site",
+        "r-keeper": "r_keeper",
+        "blog": "Blog",
+        "contact-us": "Contact Us"
+    },
+    "footer": {
+        "our-links": "Our Links",
+        "our-services": "Our Services",
+        "site": "Site",
+        "r-keeper": "r_keeper",
+        "blog": "Blog",
+        "contact-us": "Contact Us"
+    }
+}

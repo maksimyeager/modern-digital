@@ -1,0 +1,22 @@
+{
+    "header": {
+        "site": "Sayt",
+        "r-keeper": "r_keeper",
+        "blog": "Bloq",
+        "contact-us": "Əlaqə"
+    },
+    "mobile-navbar": {
+        "site": "Sayt",
+        "r-keeper": "r_keeper",
+        "blog": "Bloq",
+        "contact-us": "Əlaqə"
+    },
+    "footer": {
+        "our-links": "Bizim bağlantılar",
+        "our-services": "Bizim xidmətlər",
+        "site": "Sayt",
+        "r-keeper": "r_keeper",
+        "blog": "Bloq",
+        "contact-us": "Əlaqə"
+    }
+}

@@ -51,7 +51,7 @@ export default function RKeeper() {
                         </p>
                     </div>
                     <div className="r_keeper__info-img">
-                        <img src="/images/r-keeper.png" alt="" className="" />
+                        <img src="/images/r-keeper/r-keeper.png" alt="" className="" />
                     </div>
                 </div>
             </section>
@@ -92,7 +92,7 @@ export default function RKeeper() {
                             </div>
                             <div className="possibility__image possibility__image--1">
                                 <img
-                                    src="./../images/possibility-1.png"
+                                    src="./../images/r-keeper/possibility-1.png"
                                     alt=""
                                 />
                             </div>
@@ -100,7 +100,7 @@ export default function RKeeper() {
                         <div className="possibility possibility--2">
                             <div className="possibility__image possibility__image--2">
                                 <img
-                                    src="./../images/possibility-2.png"
+                                    src="./../images/r-keeper/possibility-2.png"
                                     alt=""
                                 />
                             </div>
@@ -142,7 +142,7 @@ export default function RKeeper() {
                             </div>
                             <div className="possibility__image possibility__image--3">
                                 <img
-                                    src="./../images/possibility-3.png"
+                                    src="./../images/r-keeper/possibility-3.png"
                                     alt=""
                                 />
                             </div>

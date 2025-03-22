@@ -1,5 +1,22 @@
 {
-    "greeting": "Привет, {name}!",
-    "description": "Это многоязычный сайт."
-  }
-  
+    "header": {
+        "site": "Сайт",
+        "r-keeper": "r_keeper",
+        "blog": "Блог",
+        "contact-us": "Контакты"
+    },
+    "mobile-navbar": {
+        "site": "Сайт",
+        "r-keeper": "r_keeper",
+        "blog": "Блог",
+        "contact-us": "Контакты"
+    },
+    "footer": {
+        "our-links": "Наши ссылки",
+        "our-services": "Наши услуги",
+        "site": "Сайт",
+        "r-keeper": "r_keeper",
+        "blog": "Блог",
+        "contact-us": "Контакты"
+    }
+}

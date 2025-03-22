@@ -12,7 +12,10 @@ export const HomeBanner: React.FC<Props> = () => {
             <div className="container">
                 <div className="home-banner__wrapper">
                     <div className="home-banner__left">
-                        <img src="./images/home-banner-1.png" alt="" />
+                        <img
+                            src="./images/home-banner/home-banner-1.png"
+                            alt=""
+                        />
 
                         <h2>r_keeper</h2>
                         <p>
@@ -23,7 +26,10 @@ export const HomeBanner: React.FC<Props> = () => {
                         </p>
                     </div>
                     <div className="home-banner__center">
-                        <img src="./images/home-banner-2.png" alt="" />
+                        <img
+                            src="./images/home-banner/home-banner-2.png"
+                            alt=""
+                        />
                         <Link href={"/site"} className="link-1">
                             Read More{" "}
                             <FiArrowUpRight className="ml-4" size={20} />
@@ -57,8 +63,16 @@ export const HomeBanner: React.FC<Props> = () => {
                 <div className="home-banner__wrapper--mobile">
                     <div className="home-banner__top">
                         <div className="home-banner__center">
-                            <img className="home-banner__center-img home-banner__center-img--1" src="./images/home-banner-2.png" alt="" />
-                            <img className="home-banner__center-img home-banner__center-img--2" src="./images/home-banner-3.png" alt="" />
+                            <img
+                                className="home-banner__center-img home-banner__center-img--1"
+                                src="./images/home-banner/home-banner-2.png"
+                                alt=""
+                            />
+                            <img
+                                className="home-banner__center-img home-banner__center-img--2"
+                                src="./images/home-banner/home-banner-3.png"
+                                alt=""
+                            />
                             <Link href={"/site"} className="link-1">
                                 Read More{" "}
                                 <FiArrowUpRight className="ml-4" size={20} />
@@ -67,7 +81,10 @@ export const HomeBanner: React.FC<Props> = () => {
                     </div>
                     <div className="home-banner__bottom">
                         <div className="home-banner__left">
-                            <img src="./images/home-banner-1.png" alt="" />
+                            <img
+                                src="./images/home-banner/home-banner-1.png"
+                                alt=""
+                            />
 
                             <h2>r_keeper</h2>
                             <p>

@@ -76,7 +76,7 @@ export const HomeSlider: React.FC<Props> = () => {
                             </div>
                         </div>
                         <div className="service__img">
-                            <img src="/images/sites.jpg" alt="" />
+                            <img src="/images/home-slider/sites.jpg" alt="" />
                         </div>
                     </div>
                 </SwiperSlide>
@@ -104,7 +104,7 @@ export const HomeSlider: React.FC<Props> = () => {
                         </div>
                         <div className="service__img">
                             <img
-                                src="/images/software.jpg"
+                                src="/images/home-slider/software.jpg"
                                 alt=""
                                 className="rounded-[43px] object-cove h-full"
                             />
@@ -129,7 +129,7 @@ export const HomeSlider: React.FC<Props> = () => {
                             </p>
                         </div>
                         <div className="service__img">
-                            <img src="/images/design.jpg" alt="" />
+                            <img src="/images/home-slider/design.jpg" alt="" />
                         </div>
                     </div>
                 </SwiperSlide>

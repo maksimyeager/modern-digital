@@ -1,13 +1,18 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
 import { BiSolidEnvelope } from "react-icons/bi";
+import { useTranslation } from "react-i18next";
 
 interface Props {
     className?: string;
 }
 
 export const Footer: React.FC<Props> = () => {
+    const { t } = useTranslation("global");
+
     return (
         <footer className="footer">
             <div className="container">
@@ -40,24 +45,24 @@ export const Footer: React.FC<Props> = () => {
                     </div>
                 </div>
                 <div className="footer__block">
-                    <h2>Our Links</h2>
+                    <h2>{t("footer.our-links")}</h2>
                     <ul className="flex flex-col gap-4 text-lg font-light">
                         <li>
-                            <Link href={"/blog"}>Blog</Link>
+                            <Link href={"/blog"}>{t("footer.blog")}</Link>
                         </li>
                         <li>
-                            <Link href={"/contact-us"}>Əlaqə</Link>
+                            <Link href={"/contact-us"}>{t("footer.contact-us")}</Link>
                         </li>
                     </ul>
                 </div>
                 <div className="footer__block">
-                    <h2>Our Services</h2>
+                    <h2>{t("footer.our-services")}</h2>
                     <ul className="flex flex-col gap-4 text-lg font-light">
                         <li>
-                            <Link href={"/site"}>Sayt</Link>
+                            <Link href={"/site"}>{t("footer.site")}</Link>
                         </li>
                         <li>
-                            <Link href={"/r-keeper"}>r_keeper</Link>
+                            <Link href={"/r-keeper"}>{t("footer.r-keeper")}</Link>
                         </li>
                         <li>
                             <Link href={"/design"}>Dizayn</Link>

@@ -32,7 +32,7 @@ export default function Site() {
                             eu fugiat nulla pariatur.
                         </p>
                         <img
-                            src="./../images/card.png"
+                            src="./../images/site-types/card.png"
                             className="site-type__img site-type__img--1"
                             alt=""
                         />
@@ -50,7 +50,7 @@ export default function Site() {
                             eu fugiat nulla pariatur.
                         </p>
                         <img
-                            src="./../images/folder.png"
+                            src="./../images/site-types/folder.png"
                             className="site-type__img site-type__img--2"
                             alt=""
                         />
@@ -68,7 +68,7 @@ export default function Site() {
                             eu fugiat nulla pariatur.
                         </p>
                         <img
-                            src="./../images/megaphone.png"
+                            src="./../images/site-types/megaphone.png"
                             className="site-type__img site-type__img--3"
                             alt=""
                         />
@@ -85,7 +85,7 @@ export default function Site() {
                             eu fugiat nulla pariatur.
                         </p>
                         <img
-                            src="./../images/cart.png"
+                            src="./../images/site-types/cart.png"
                             className="site-type__img site-type__img--4"
                             alt=""
                         />

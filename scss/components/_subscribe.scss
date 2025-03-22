@@ -1,3 +1,11 @@
+.section--subscribe {
+    margin-top: 60px;
+
+    @media (max-width: 900px) {
+        margin-top: 0;
+    }
+}
+
 .subscribe {
     position: relative;
     width: 100%;
@@ -37,6 +45,12 @@
                 font-size: 28px;
             }
 
+            @media (max-width: 576px) {
+                flex-grow: 1;
+                text-align: center;
+                padding-left: 0;
+            }
+
             span {
                 font-weight: 600;
                 color: #01f59d;
@@ -45,10 +59,28 @@
     }
 
     &__img {
-        position: relative;
-        width: 400px;
+        // position: relative;
+        position: absolute;
+        top: calc(-0% - 158px);
+        right: 0%;
+        width: 350px;
         height: max-content;
+
+        @media (max-width: 900px) {
+            width: 250px;
+            top: calc(-0% - 92px);
+        }
+
+        @media (max-width: 768px) {
+            top: calc(-0% - 111px);
+            right: 1%;
+        }
+
+        @media (max-width: 576px) {
+            display: none;
+        }
         img {
+            width: 100%;
         }
     }
 

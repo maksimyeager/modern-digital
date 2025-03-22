@@ -5,17 +5,21 @@ import { Button } from "../ui";
 import Link from "next/link";
 import Image from "next/image";
 import { MobileNavbar } from "./mobile-navbar";
+import { useTranslation } from "react-i18next";
+import LanguageSelector from "./language-selector";
 
 interface Props {
     className?: string;
 }
 
 export const Header: React.FC<Props> = () => {
+    const { t, i18n } = useTranslation("global");
     const [open, setOpen] = useState(false);
     const handleClose = () => {
         setOpen(false);
         document.body.classList.add("no-scroll");
     };
+    console.log(i18n.language);
     return (
         <>
             <header className="header">
@@ -30,25 +34,24 @@ export const Header: React.FC<Props> = () => {
                     </Link>
                     <ul className="header__list">
                         <li>
-                            <Link href={"/site"}>Sayt</Link>
+                            <Link href={"/site"}>{t("header.site")}</Link>
                         </li>
                         <li>
-                            <Link href={"/r-keeper"}>r_keeper</Link>
+                            <Link href={"/r-keeper"}>
+                                {t("header.r-keeper")}
+                            </Link>
                         </li>
                         <li>
-                            <Link href={"/blog"}>Blog</Link>
+                            <Link href={"/blog"}>{t("header.blog")}</Link>
                         </li>
                         <li>
-                            <Link href={"/contact-us"}>Əlaqə</Link>
+                            <Link href={"/contact-us"}>
+                                {t("header.contact-us")}
+                            </Link>
                         </li>
                     </ul>
                     <div>
-                        <Button
-                            variant={"secondary"}
-                            className="hidden md:flex text-lg font-semibold shadow-secondary"
-                        >
-                            AZ
-                        </Button>
+                        <LanguageSelector />
                         <button
                             className="header__btn"
                             onClick={() => setOpen(true)}

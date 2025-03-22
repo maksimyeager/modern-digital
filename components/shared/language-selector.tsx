@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronDown } from "react-icons/fa";
 
-const LanguageSelector: React.FC = () => {
-    const { i18n } = useTranslation("global");
-    const [isOpen, setIsOpen] = useState<boolean>(false); // Исправлено
+const LanguageSelector = () => {
+    const { i18n } = useTranslation();
+    const [isOpen, setIsOpen] = useState(false);
 
     const changeLanguage = (lng: string) => {
         document.documentElement.lang = lng;
@@ -15,33 +15,28 @@ const LanguageSelector: React.FC = () => {
         setIsOpen(false);
     };
 
-    const openDropdown = () => setIsOpen(true);
-    const closeDropdown = () => setIsOpen(false);
-
-    // Список доступных языков
-    const languages: string[] = ["ru", "en"];
-
-    // Исключаем текущий язык из списка
-    const availableLanguages = languages.filter(
-        (lang) => lang !== i18n.language
-    );
-
     return (
         <div
             className="language-selector"
-            onMouseEnter={openDropdown}
-            onMouseLeave={closeDropdown}
+            onMouseEnter={() => setIsOpen(true)}
+            onMouseLeave={() => setIsOpen(false)}
         >
             <div className="language-toggle">
-                {i18n.language.toUpperCase()} <FaChevronDown />
+                {i18n.language.toUpperCase()} <FaChevronDown className="ml-1" />
             </div>
             {isOpen && (
                 <ul className="language-menu">
-                    {availableLanguages.map((lang) => (
-                        <li key={lang} onClick={() => changeLanguage(lang)}>
-                            {lang.toUpperCase()}
-                        </li>
-                    ))}
+                    {["ru", "en", "az"]
+                        .filter((lang) => lang !== i18n.language)
+                        .map((lang) => (
+                            <li
+                                key={lang}
+                               
+                                onClick={() => changeLanguage(lang)}
+                            >
+                                {lang.toUpperCase()}
+                            </li>
+                        ))}
                 </ul>
             )}
         </div>

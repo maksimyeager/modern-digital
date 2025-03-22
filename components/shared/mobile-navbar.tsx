@@ -3,6 +3,8 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import { IoClose } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
+import MobileLanguageSelector from "./mobile-language-selector";
 
 interface Props {
     open: boolean;
@@ -11,13 +13,13 @@ interface Props {
 }
 
 export const MobileNavbar: React.FC<Props> = ({ open, onClose }) => {
-    // const { t } = useTranslation("global");
+    const { t } = useTranslation("global");
 
     const mobileNavbarLinks = [
-        { name: "Sayt", path: "/site" },
-        { name: "r_keeper", path: "/r-keeper" },
-        { name: "Blog", path: "/blog" },
-        { name: "Contact Us", path: "/contact-us" },
+        { name: t("mobile-navbar.site"), path: "/site" },
+        { name: t("mobile-navbar.r-keeper"), path: "/r-keeper" },
+        { name: t("mobile-navbar.blog"), path: "/blog" },
+        { name: t("mobile-navbar.contact-us"), path: "/contact-us" },
     ];
 
     useEffect(() => {
@@ -62,6 +64,9 @@ export const MobileNavbar: React.FC<Props> = ({ open, onClose }) => {
                         );
                     })}
                 </ul>
+                <div className="mobile-navbar__settings">
+                    <MobileLanguageSelector />
+                </div>
             </div>
         </>
     );

@@ -167,7 +167,7 @@
         flex: 1;
         padding: 40px;
         background-color: #160a2e;
-        border-radius: 43px;
+        border-radius: clamp(1.438rem, 0.104rem + 2.778vw, 2.188rem);
 
         @media (max-width: 768px) {
             flex: 0;
@@ -196,7 +196,7 @@
     &__image {
         flex: 1;
         max-width: 495px;
-        border-radius: 43px;
+        border-radius: clamp(1.438rem, 0.104rem + 2.778vw, 2.188rem);
         overflow: hidden;
 
         img {

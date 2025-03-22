@@ -7,8 +7,9 @@
 
 // Components
 @use "./header";
-@use "./footer";
 @use "./mobile-navbar";
+@use "./language-selector";
+@use "./footer";
 @use "./home-banner";
 @use "./subscribe";
 @use "./home";
