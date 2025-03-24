@@ -55,8 +55,7 @@ export default function Blog() {
                                 href={"/blog-page/1"}
                                 className="blog__link link-1"
                             >
-                                Read More{" "}
-                                <FiArrowUpRight className="ml-4" size={20} />
+                                Read More <FiArrowUpRight size={20} />
                             </Link>
                         </div>
                     </div>
@@ -83,8 +82,7 @@ export default function Blog() {
                                 href={"/blog-page/1"}
                                 className="blog__link link-1"
                             >
-                                Read More{" "}
-                                <FiArrowUpRight className="ml-4" size={20} />
+                                Read More <FiArrowUpRight size={20} />
                             </Link>
                         </div>
                     </div>

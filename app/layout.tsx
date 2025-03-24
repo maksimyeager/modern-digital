@@ -1,7 +1,5 @@
-import type { Metadata } from "next";
 import { Alexandria } from "next/font/google";
 import { Header, Footer } from "@/components/shared";
-import { cn } from "@/lib/utils";
 import "./globals.css";
 import "./../scss/app.scss";
 import I18nProvider from "@/components/providers/i18n-provider";
@@ -12,21 +10,30 @@ const alexandria = Alexandria({
     weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata: Metadata = {
-    title: "Modern Digital",
-};
+export async function generateMetadata({
+    params,
+}: {
+    params: { locale: string };
+}) {
+    return {
+        title: "Modern Digital",
+        lang: params.locale,
+    };
+}
 
 export default function RootLayout({
     children,
+    params,
 }: Readonly<{
     children: React.ReactNode;
+    params: { locale: string };
 }>) {
     return (
-        <html lang="en">
+        <html lang={params.locale}>
             <head>
-                <link rel="shortcut icon" href="./logo.png" />
+                <link rel="shortcut icon" href="/logo.png" />
             </head>
-            <body className={cn("", alexandria.variable)}>
+            <body className={alexandria.variable}>
                 <I18nProvider>
                     <Header />
                     {children}

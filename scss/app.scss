@@ -90,6 +90,7 @@ body.no-scroll {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     min-width: 160px;
     height: 40px;
     white-space: nowrap;
@@ -107,9 +108,9 @@ body.no-scroll {
         box-shadow: 0px 0px 18.5px 0px #01f59d;
     }
 
-    svg {
-        margin-left: 8px;
-    }
+    // svg {
+    //     margin-left: 8px;
+    // }
 }
 
 .link-3 {

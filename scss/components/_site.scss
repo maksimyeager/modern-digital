@@ -2,6 +2,8 @@
     font-size: 15px;
     font-weight: 300;
     text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
 }
 
 .section--site-types {
@@ -51,7 +53,7 @@
     p {
         font-size: 15px;
         font-weight: 300;
-        padding-right: 15px;
+        padding-right: 30px;
     }
 
     &__img {
@@ -116,18 +118,12 @@
     h2.section__title {
         text-align: center;
         font-size: 40px;
-        margin-bottom: 10px;
+        margin-bottom: 60px;
 
         @media (max-width: 768px) {
             font-size: 28px;
+            margin-bottom: 30px;
         }
-    }
-
-    .section__desc {
-        font-size: 15px;
-        font-weight: 300;
-        text-align: center;
-        margin-bottom: 60px;
     }
 
     .stages {
@@ -210,6 +206,11 @@
             font-size: 15px;
             font-weight: 300;
             line-height: 1.25;
+            padding-right: 44px;
+
+            @media (max-width: 576px) {
+                padding-right: 0;
+            }
         }
     }
 }

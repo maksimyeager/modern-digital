@@ -6,12 +6,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Swiper as SwiperCore } from "swiper";
+import { useTranslation } from "react-i18next";
 
 interface Props {
     className?: string;
 }
 
 export const HomeSlider: React.FC<Props> = () => {
+    const { t } = useTranslation("global");
     const [activeIndex, setActiveIndex] = useState(0);
     const swiperRef = useRef<SwiperCore | null>(null);
 
@@ -26,23 +28,25 @@ export const HomeSlider: React.FC<Props> = () => {
     return (
         <div className="services-slider__wrapper">
             <div className="services-slider__controls">
-                {["Website Development", "Proqram Təminatı", "Dizayn"].map(
-                    (text, index) => (
-                        <button
-                            key={index}
-                            className={`services-slider__btn services-slider__btn--${
-                                index + 1
-                            } ${
-                                activeIndex === index
-                                    ? "services-slider__btn--active"
-                                    : ""
-                            }`}
-                            onClick={() => handleSlideChange(index)}
-                        >
-                            {text}
-                        </button>
-                    )
-                )}
+                {[
+                    t("home-slider.btn-1"),
+                    t("home-slider.btn-2"),
+                    t("home-slider.btn-3"),
+                ].map((text, index) => (
+                    <button
+                        key={index}
+                        className={`services-slider__btn services-slider__btn--${
+                            index + 1
+                        } ${
+                            activeIndex === index
+                                ? "services-slider__btn--active"
+                                : ""
+                        }`}
+                        onClick={() => handleSlideChange(index)}
+                    >
+                        {text}
+                    </button>
+                ))}
             </div>
 
             <Swiper
@@ -55,23 +59,13 @@ export const HomeSlider: React.FC<Props> = () => {
                 <SwiperSlide className="services-slider__slide">
                     <div className="service">
                         <div className="service__info">
-                            <h2> Website Development</h2>
+                            <h2>{t("home-slider.service-1")}</h2>
 
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut
-                                enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.
-                            </p>
+                            <p>{t("home-slider.service-desc-1")}</p>
                             <div className="service__controls">
                                 <Link href={"/site"} className="link-1">
-                                    Read More{" "}
-                                    <FiArrowUpRight
-                                        className="ml-4"
-                                        size={20}
-                                    />
+                                    {t("read-more-btn")}
+                                    <FiArrowUpRight size={20} />
                                 </Link>
                             </div>
                         </div>
@@ -83,22 +77,11 @@ export const HomeSlider: React.FC<Props> = () => {
                 <SwiperSlide className="services-slider__slide">
                     <div className="service">
                         <div className="service__info">
-                            <h2>Proqram Təminatı</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut
-                                enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.
-                            </p>
+                            <h2>{t("home-slider.service-2")}</h2>
+                            <p>{t("home-slider.service-desc-2")}</p>
                             <div className="service__controls">
                                 <Link href={"/r-keeper"} className="link-1">
-                                    r_keeper{" "}
-                                    <FiArrowUpRight
-                                        className="ml-4"
-                                        size={20}
-                                    />
+                                    r_keeper <FiArrowUpRight size={20} />
                                 </Link>
                             </div>
                         </div>
@@ -114,19 +97,8 @@ export const HomeSlider: React.FC<Props> = () => {
                 <SwiperSlide className="services-slider__slide">
                     <div className="service">
                         <div className="service__info">
-                            <h2>Dizayn</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut
-                                enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur sint
-                                occaecat cupidatat non proident, sunt in culpa
-                                qui officia deserunt mollit anim id est laborum.
-                            </p>
+                            <h2>{t("home-slider.service-3")}</h2>
+                            <p>{t("home-slider.service-desc-3")}</p>
                         </div>
                         <div className="service__img">
                             <img src="/images/home-slider/design.jpg" alt="" />

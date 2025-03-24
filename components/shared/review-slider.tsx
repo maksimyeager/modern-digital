@@ -6,55 +6,56 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Review } from "./review";
+import { useTranslation } from "react-i18next";
 
 interface Props {
     className?: string;
 }
 
-const rewies = [
-    {
-        id: "1",
-        company: "Azklima",
-        rewiew: "I would like to express my deep gratitude to Modern Digital for their attention and care, and also wish Jamil Mehdiyev that his successes will be lasting. I also thank them in advance for the support they will provide in improving the website they have developed.",
-        companyImg: "./images/rewiews/azklima.png",
-        author: "Cavid Mikayilov",
-        role: "Head of Marketing Department",
-    },
-    {
-        id: "2",
-        company: "BSS MMC",
-        rewiew: "As BSS MMC, we are glad to cooperate with you. You have provided important services such as the development of our website, design work and logo design, and have proven your professionalism in every project. We have enjoyed your attention and creativity at every stage of our work.",
-        companyImg: "./images/rewiews/bss.png",
-        author: "Anar Sultanov",
-        role: "CEO",
-    },
-    {
-        id: "3",
-        company: "MS clinic",
-        rewiew: "As MS clinic, we were very pleased with our cooperation with Modern Digital. The website and software we ordered exceeded our expectations in terms of quality and timing. Thank you for your professionalism and attention to detail. We recommend them!",
-        companyImg: "./images/rewiews/ms-clinic.png",
-        author: "Gunel Isayeva",
-        role: "CEO",
-    },
-    {
-        id: "4",
-        company: "Javelin Patisserie",
-        rewiew: "As the founder and CEO of Javelin, I want to thank Modern Digital for the work they have done. The warehouse programs made our work accurate, the website they created and their design impressed everyone.",
-        companyImg: "./images/rewiews/javelin.png",
-        author: "Fagan Mehdi",
-        role: "CEO",
-    },
-    {
-        id: "5",
-        company: "Brandbox",
-        rewiew: "On behalf of Brandbox and its CEO Aydin Mehdiyev, we express our sincere gratitude to Modern Digital for efficient cooperation and high professionalism. We hope to continue successful partnerships and joint projects in the future.",
-        companyImg: "./images/rewiews/brandbox.png",
-        author: "Aydin Mehdiyev",
-        role: "CEO",
-    },
-];
-
 export const RewiewSlider: React.FC<Props> = () => {
+    const { t } = useTranslation("global");
+    const reviews = [
+        {
+            id: "1",
+            company: "Azklima",
+            rewiew: t("reviews.review-azklima"),
+            companyImg: "./images/rewiews/azklima.png",
+            author: "Cavid Mikayilov",
+            role: t("reviews.review-azklima-role"),
+        },
+        {
+            id: "2",
+            company: "BSS MMC",
+            rewiew: t("reviews.review-bss"),
+            companyImg: "./images/rewiews/bss.png",
+            author: "Anar Sultanov",
+            role: t("reviews.review-bss-role"),
+        },
+        {
+            id: "3",
+            company: "MS clinic",
+            rewiew: t("reviews.review-msclinic"),
+            companyImg: "./images/rewiews/ms-clinic.png",
+            author: "Gunel Isayeva",
+            role: t("reviews.review-msclinic-role"),
+        },
+        {
+            id: "4",
+            company: "Javelin Patisserie",
+            rewiew: t("reviews.review-javelin"),
+            companyImg: "./images/rewiews/javelin.png",
+            author: "Fagan Mehdi",
+            role: t("reviews.review-javelin-role"),
+        },
+        {
+            id: "5",
+            company: "Brandbox",
+            rewiew: t("reviews.review-brandbox"),
+            companyImg: "./images/rewiews/brandbox.png",
+            author: "Aydin Mehdiyev",
+            role: t("reviews.review-brandbox-role"),
+        },
+    ];
     return (
         <div className="rewiew-slider__wrapper">
             <Swiper
@@ -81,7 +82,7 @@ export const RewiewSlider: React.FC<Props> = () => {
                     },
                 }}
             >
-                {rewies.map((item) => (
+                {reviews.map((item) => (
                     <SwiperSlide key={item.id} className="rewiew-slider__slide">
                         <Review
                             company={item.company}

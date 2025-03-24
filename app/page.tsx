@@ -1,18 +1,23 @@
+"use client";
+
 import { Subscribe } from "@/components/shared";
 import { HomeBanner } from "@/components/shared/home-banner";
 import { HomeSlider } from "@/components/shared/home-slider";
 import { Reviews } from "@/components/shared/reviews";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import { FiArrowUpRight } from "react-icons/fi";
 
 export default function Home() {
+    const { t } = useTranslation("global");
     return (
         <>
             <HomeBanner />
             <section className="section section--services">
                 <div className="container">
                     <h2 className="section__title">
-                        Sizə Təklif Etdiyimiz <span>Xidmətlərimiz</span>
+                        {t("home-slider.title-1")}{" "}
+                        <span>{t("home-slider.title-span")}</span>
                     </h2>
                     <HomeSlider />
                 </div>
@@ -90,7 +95,10 @@ export default function Home() {
                 <div className="container">
                     <div className="subscribe__head">
                         <h2>
-                            Got A <span>Project</span> In Mind?
+                            {/* Got A <span>Project</span> In Mind? */}
+                            {t("subscribe.title-1")}{" "}
+                            <span>{t("subscribe.title-span")}</span>{" "}
+                            {t("subscribe.title-2")}
                         </h2>
                         <div className="subscribe__img">
                             <img src="./images/subscribe.png" alt="" />

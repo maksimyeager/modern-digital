@@ -15,7 +15,11 @@
             max-width: 663px;
             width: 100%;
             padding: 43px;
-            background: #160a2e;
+            background-color: #160a2e;
+            background-image: url("/images/overlays/r-keeper.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             border-radius: 43px;
 
             @media (max-width: 768px) {
@@ -103,6 +107,10 @@
             border: 1px solid transparent;
             border-radius: 15px;
 
+            p{
+                line-height: 1.1;
+            }
+
             span {
                 color: #01f59d;
                 font-weight: 500;
@@ -152,14 +160,31 @@
     display: flex;
     width: 100%;
     gap: 30px;
+    align-items: stretch;
 
     @media (max-width: 768px) {
         flex-direction: column-reverse;
     }
 
+    &--1 {
+        .possibility__info {
+            background-image: url("/images/overlays/possibility-1.png");
+        }
+    }
+
     &--2 {
+        .possibility__info {
+            background-image: url("/images/overlays/possibility-2.png");
+        }
+
         @media (max-width: 768px) {
             flex-direction: column;
+        }
+    }
+
+    &--3 {
+        .possibility__info {
+            background-image: url("/images/overlays/possibility-3.png");
         }
     }
 
@@ -167,12 +192,16 @@
         flex: 1;
         padding: 40px;
         background-color: #160a2e;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         border-radius: clamp(1.438rem, 0.104rem + 2.778vw, 2.188rem);
 
         @media (max-width: 768px) {
             flex: 0;
             padding: 30px;
             border-radius: 23px;
+            height: fit-content;
         }
 
         h2 {
@@ -207,6 +236,7 @@
 
         @media (max-width: 768px) {
             max-width: 100%;
+            height: auto;
             border-radius: 23px;
             aspect-ratio: 12 / 7;
         }

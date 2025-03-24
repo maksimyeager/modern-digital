@@ -16,14 +16,19 @@ export const HomeBanner: React.FC<Props> = () => {
                             src="./images/home-banner/home-banner-1.png"
                             alt=""
                         />
-
-                        <h2>r_keeper</h2>
-                        <p>
-                            Dünyaca tanınmış r_keeper proqram təminatının
-                            Azərbaycan Respublikasında ki, rəsmi nümayəndəsi
-                            olmağın müjdəsini sizin ilə paylaşmaq istəyirik.
-                            Ətraflı məlumatlar üçün bizi izləməyi unutmayın!
-                        </p>
+                        <div className="home-banner__left-info">
+                            <h2>r_keeper</h2>
+                            <p>
+                                Dünyaca tanınmış r_keeper proqram təminatının
+                                Azərbaycan Respublikasında ki, rəsmi nümayəndəsi
+                                olmağın{" "}
+                                <Link href={"/r-keeper"} className="link-1">
+                                    <FiArrowUpRight size={24} />
+                                </Link>
+                                müjdəsini sizin ilə paylaşmaq istəyirik. Ətraflı
+                                məlumatlar üçün bizi izləməyi unutmayın!
+                            </p>
+                        </div>
                     </div>
                     <div className="home-banner__center">
                         <img
@@ -31,8 +36,7 @@ export const HomeBanner: React.FC<Props> = () => {
                             alt=""
                         />
                         <Link href={"/site"} className="link-1">
-                            Read More{" "}
-                            <FiArrowUpRight className="ml-4" size={20} />
+                            Read More <FiArrowUpRight size={20} />
                         </Link>
                     </div>
                     <div className="home-banner__right">
@@ -74,8 +78,7 @@ export const HomeBanner: React.FC<Props> = () => {
                                 alt=""
                             />
                             <Link href={"/site"} className="link-1">
-                                Read More{" "}
-                                <FiArrowUpRight className="ml-4" size={20} />
+                                Read More <FiArrowUpRight size={20} />
                             </Link>
                         </div>
                     </div>
@@ -86,13 +89,20 @@ export const HomeBanner: React.FC<Props> = () => {
                                 alt=""
                             />
 
-                            <h2>r_keeper</h2>
-                            <p>
-                                Dünyaca tanınmış r_keeper proqram təminatının
-                                Azərbaycan Respublikasında ki, rəsmi nümayəndəsi
-                                olmağın müjdəsini sizin ilə paylaşmaq istəyirik.
-                                Ətraflı məlumatlar üçün bizi izləməyi unutmayın!
-                            </p>
+                            <div className="home-banner__left-info">
+                                <h2>r_keeper</h2>
+                                <p>
+                                    Dünyaca tanınmış r_keeper proqram
+                                    təminatının Azərbaycan Respublikasında ki,
+                                    rəsmi nümayəndəsi olmağın{" "}
+                                    <Link href={"/r-keeper"} className="link-1">
+                                        <FiArrowUpRight size={24} />
+                                    </Link>
+                                    müjdəsini sizin ilə paylaşmaq istəyirik.
+                                    Ətraflı məlumatlar üçün bizi izləməyi
+                                    unutmayın!
+                                </p>
+                            </div>
                         </div>
 
                         <div className="home-banner__right">

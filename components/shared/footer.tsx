@@ -33,13 +33,13 @@ export const Footer: React.FC<Props> = () => {
                         <div className="footer__contacts-block">
                             <BiSolidEnvelope color="#5800FF" size={24} />
                             <span className="text-[#131312]">
-                                Example@gmail.com
+                                info@moderndigital.az
                             </span>
                         </div>
                         <div className="footer__contacts-block">
                             <FaPhoneAlt color="#5800FF" size={20} />
                             <span className="text-[#131312]">
-                                +777 77 777 77
+                                +994 50 632 52 81
                             </span>
                         </div>
                     </div>
@@ -51,7 +51,9 @@ export const Footer: React.FC<Props> = () => {
                             <Link href={"/blog"}>{t("footer.blog")}</Link>
                         </li>
                         <li>
-                            <Link href={"/contact-us"}>{t("footer.contact-us")}</Link>
+                            <Link href={"/contact-us"}>
+                                {t("footer.contact-us")}
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -62,7 +64,9 @@ export const Footer: React.FC<Props> = () => {
                             <Link href={"/site"}>{t("footer.site")}</Link>
                         </li>
                         <li>
-                            <Link href={"/r-keeper"}>{t("footer.r-keeper")}</Link>
+                            <Link href={"/r-keeper"}>
+                                {t("footer.r-keeper")}
+                            </Link>
                         </li>
                         <li>
                             <Link href={"/design"}>Dizayn</Link>
@@ -76,12 +80,14 @@ export const Footer: React.FC<Props> = () => {
                     <div className="footer__contacts-block">
                         <BiSolidEnvelope color="#5800FF" size={24} />
                         <span className="text-[#131312]">
-                            Example@gmail.com
+                            info@moderndigital.az
                         </span>
                     </div>
                     <div className="footer__contacts-block">
                         <FaPhoneAlt color="#5800FF" size={20} />
-                        <span className="text-[#131312]">+777 77 777 77</span>
+                        <span className="text-[#131312]">
+                            +994 50 632 52 81
+                        </span>
                     </div>
                 </div>
             </div>
