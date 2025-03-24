@@ -25,10 +25,11 @@ export default function Home() {
             <section className="section section--blog">
                 <div className="container">
                     <div className="section__head">
-                        <h2>Our Blog</h2>
+                        <h2>{t("home-blog.title")}</h2>
                         <div className="section__link-wrapper">
                             <Link href={"/blogs"} className="blog__link link-3">
-                                See More Blogs <FiArrowUpRight size={20} />
+                                {t("home-blog.btn")}
+                                <FiArrowUpRight size={20} />
                             </Link>
                         </div>
                     </div>
@@ -85,7 +86,7 @@ export default function Home() {
                     </div>
                     <div className="section__link-wrapper section__link-wrapper--mobile">
                         <Link href={"/blogs"} className="blog__link link-3">
-                            See More Blogs <FiArrowUpRight size={20} />
+                            {t("home-blog.btn")} <FiArrowUpRight size={20} />
                         </Link>
                     </div>
                 </div>

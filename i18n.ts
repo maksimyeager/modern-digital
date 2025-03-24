@@ -17,6 +17,9 @@ i18n.use(HttpApi)
         backend: {
             loadPath: "/locales/{{lng}}/global.json",
         },
+        react: {
+            useSuspense: false,
+        },
     });
 
 export default i18n;

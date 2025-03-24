@@ -121,6 +121,17 @@
         "service-3": "Дизайн",
         "service-desc-3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
+    "home-banner": {
+        "left-desc-1": "Мы хотим поделиться с вами хорошей новостью о том, что являемся официальным представителем всемирно известного программного обеспечения r_keeper в Азербайджанской",
+        "left-desc-2": " Республике. Не забывайте следить за нами для получения подробной информации!",
+        "right-desc-1": "Годы опыта",
+        "right-desc-2": "Счастливых клиентов",
+        "right-desc-3": "Сайтов"
+    },
+    "home-blog": {
+        "title": "Наш Блог",
+        "btn": "Подробнее"
+    },
 
     "read-more-btn": "Подробнее"
 }

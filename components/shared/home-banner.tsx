@@ -1,12 +1,16 @@
+"use client";
+
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 interface Props {
     className?: string;
 }
 
 export const HomeBanner: React.FC<Props> = () => {
+    const { t } = useTranslation("global");
     return (
         <div className="home-banner">
             <div className="container">
@@ -19,14 +23,11 @@ export const HomeBanner: React.FC<Props> = () => {
                         <div className="home-banner__left-info">
                             <h2>r_keeper</h2>
                             <p>
-                                Dünyaca tanınmış r_keeper proqram təminatının
-                                Azərbaycan Respublikasında ki, rəsmi nümayəndəsi
-                                olmağın{" "}
+                                {t("home-banner.left-desc-1")}
                                 <Link href={"/r-keeper"} className="link-1">
                                     <FiArrowUpRight size={24} />
                                 </Link>
-                                müjdəsini sizin ilə paylaşmaq istəyirik. Ətraflı
-                                məlumatlar üçün bizi izləməyi unutmayın!
+                                {t("home-banner.left-desc-2")}
                             </p>
                         </div>
                     </div>
@@ -36,7 +37,7 @@ export const HomeBanner: React.FC<Props> = () => {
                             alt=""
                         />
                         <Link href={"/site"} className="link-1">
-                            Read More <FiArrowUpRight size={20} />
+                            {t("read-more-btn")} <FiArrowUpRight size={20} />
                         </Link>
                     </div>
                     <div className="home-banner__right">
@@ -44,23 +45,25 @@ export const HomeBanner: React.FC<Props> = () => {
                             <p className="home-banner__right-data">
                                 4 <span>+</span>
                             </p>
-                            <p className="text-[14px] font-light">
-                                Years Experience{" "}
+                            <p className="home-banner__right-desc">
+                                {t("home-banner.right-desc-1")}
                             </p>
                         </div>
                         <div className="">
                             <p className="home-banner__right-data">
                                 98 <span>%</span>
                             </p>
-                            <p className="text-[14px] font-light">
-                                Happy Clients
+                            <p className="home-banner__right-desc">
+                                {t("home-banner.right-desc-2")}
                             </p>
                         </div>
                         <div className="">
                             <p className="home-banner__right-data">
                                 30 <span>+</span>
                             </p>
-                            <p className="text-[14px] font-light">Websites</p>
+                            <p className="home-banner__right-desc">
+                                {t("home-banner.right-desc-3")}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -78,7 +81,8 @@ export const HomeBanner: React.FC<Props> = () => {
                                 alt=""
                             />
                             <Link href={"/site"} className="link-1">
-                                Read More <FiArrowUpRight size={20} />
+                                {t("read-more-btn")}{" "}
+                                <FiArrowUpRight size={20} />
                             </Link>
                         </div>
                     </div>
@@ -92,15 +96,11 @@ export const HomeBanner: React.FC<Props> = () => {
                             <div className="home-banner__left-info">
                                 <h2>r_keeper</h2>
                                 <p>
-                                    Dünyaca tanınmış r_keeper proqram
-                                    təminatının Azərbaycan Respublikasında ki,
-                                    rəsmi nümayəndəsi olmağın{" "}
+                                    {t("home-banner.left-desc-1")}
                                     <Link href={"/r-keeper"} className="link-1">
                                         <FiArrowUpRight size={24} />
                                     </Link>
-                                    müjdəsini sizin ilə paylaşmaq istəyirik.
-                                    Ətraflı məlumatlar üçün bizi izləməyi
-                                    unutmayın!
+                                    {t("home-banner.left-desc-2")}
                                 </p>
                             </div>
                         </div>
@@ -110,24 +110,24 @@ export const HomeBanner: React.FC<Props> = () => {
                                 <p className="home-banner__right-data">
                                     4 <span>+</span>
                                 </p>
-                                <p className="text-[14px] font-light">
-                                    Years Experience{" "}
+                                <p className="home-banner__right-desc">
+                                    {t("home-banner.right-desc-1")}
                                 </p>
                             </div>
                             <div className="">
                                 <p className="home-banner__right-data">
                                     98 <span>%</span>
                                 </p>
-                                <p className="text-[14px] font-light">
-                                    Happy Clients
+                                <p className="home-banner__right-desc">
+                                    {t("home-banner.right-desc-2")}
                                 </p>
                             </div>
                             <div className="">
                                 <p className="home-banner__right-data">
                                     30 <span>+</span>
                                 </p>
-                                <p className="text-[14px] font-light">
-                                    Websites
+                                <p className="home-banner__right-desc">
+                                    {t("home-banner.right-desc-3")}
                                 </p>
                             </div>
                         </div>

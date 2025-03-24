@@ -56,7 +56,7 @@
         "stage-desc-4": "Texniki tapşırıq əsasında saytın “Demo versiyası” 7 iş günü ərzindı hazırlanır.",
         "stage-5": "Saytın Yazılması",
         "stage-desc-5": "UI Dizayn təsdiqləndiqdən sonra, saytın sıfırdan kod vasitəsi ilə yazılması başlayır.",
-        "stage-final": "ödəniş",
+        "stage-final": "Ödəniş",
         "stage-final-desc": "50% ilkin ödəniş etdikdən sonra iş prosessi başlayır. Layihə təhvil verildikdən sonra qalan 50% ödənilir.",
         "presentation": "Ətraflı öyrənmək üçün təqdimatı yüklə!",
         "presentation-desc": "Tam ətraflı məlumatlar təqdimatlarımızda!",
@@ -120,6 +120,17 @@
         "service-desc-2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "service-3": "Dizayn",
         "service-desc-3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    "home-banner": {
+        "left-desc-1": "Dünyaca tanınmış r_keeper proqram təminatının Azərbaycan Respublikasında ki, rəsmi nümayəndəsi olmağın",
+        "left-desc-2": "müjdəsini sizin ilə paylaşmaq istəyirik. Ətraflı məlumatlar üçün bizi izləməyi unutmayın!",
+        "right-desc-1": "İllərlə Təcrübə",
+        "right-desc-2": "Məmnun Müştərilər",
+        "right-desc-3": "Saytlar"
+    },
+    "home-blog": {
+        "title": "Bloq",
+        "btn": "Bloq Haqqında Әtraflı"
     },
 
     "read-more-btn": "Daha ətraflı"

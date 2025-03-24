@@ -121,6 +121,17 @@
         "service-3": "Design",
         "service-desc-3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
+    "home-banner": {
+        "left-desc-1": "We want to share with you the good news of being the official representative of the world-renowned  ",
+        "left-desc-2": "r_keeper software in the Republic of Azerbaijan.Don't forget to follow us for details!",
+        "right-desc-1": "Years Experience",
+        "right-desc-2": "Happy Clients",
+        "right-desc-3": "Websites"
+    },
+    "home-blog": {
+        "title": "Our Blog",
+        "btn": "See More Blogs"
+    },
 
     "read-more-btn": "Read More"
 }

@@ -17,28 +17,26 @@ const LanguageSelector = () => {
 
     return (
         <div
-            className="language-selector"
+            className={"language-selector"}
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
         >
             <div className="language-toggle">
-                {i18n.language.toUpperCase()} <FaChevronDown className="ml-1" />
+                {i18n.language.toUpperCase()} <FaChevronDown />
             </div>
-            {isOpen && (
-                <ul className="language-menu">
-                    {["ru", "en", "az"]
-                        .filter((lang) => lang !== i18n.language)
-                        .map((lang) => (
-                            <li
-                                key={lang}
-                               
-                                onClick={() => changeLanguage(lang)}
-                            >
-                                {lang.toUpperCase()}
-                            </li>
-                        ))}
-                </ul>
-            )}
+            <ul
+                className={`language-menu ${
+                    isOpen ? "language-menu--open" : ""
+                }`}
+            >
+                {["ru", "en", "az"]
+                    .filter((lang) => lang !== i18n.language)
+                    .map((lang) => (
+                        <li key={lang} onClick={() => changeLanguage(lang)}>
+                            {lang.toUpperCase()}
+                        </li>
+                    ))}
+            </ul>
         </div>
     );
 };
