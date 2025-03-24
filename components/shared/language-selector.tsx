@@ -1,12 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronDown } from "react-icons/fa";
 
 const LanguageSelector = () => {
     const { i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true); // Устанавливаем флаг, что мы на клиенте
+    }, []);
 
     const changeLanguage = (lng: string) => {
         document.documentElement.lang = lng;
@@ -15,6 +20,10 @@ const LanguageSelector = () => {
         setIsOpen(false);
     };
 
+    if (!isClient) {
+        return null; // На сервере ничего не рендерим, только на клиенте
+    }
+
     return (
         <div
             className={"language-selector"}
@@ -22,21 +31,20 @@ const LanguageSelector = () => {
             onMouseLeave={() => setIsOpen(false)}
         >
             <div className="language-toggle">
-                {i18n.language.toUpperCase()} <FaChevronDown />
+                {i18n.language ? i18n.language.toUpperCase() : "EN"}{" "}
+                <FaChevronDown />
             </div>
-            <ul
-                className={`language-menu ${
-                    isOpen ? "language-menu--open" : ""
-                }`}
-            >
-                {["ru", "en", "az"]
-                    .filter((lang) => lang !== i18n.language)
-                    .map((lang) => (
-                        <li key={lang} onClick={() => changeLanguage(lang)}>
-                            {lang.toUpperCase()}
-                        </li>
-                    ))}
-            </ul>
+            {isOpen && (
+                <ul className="language-menu">
+                    {["ru", "en", "az"]
+                        .filter((lang) => lang !== i18n.language)
+                        .map((lang) => (
+                            <li key={lang} onClick={() => changeLanguage(lang)}>
+                                {lang.toUpperCase()}
+                            </li>
+                        ))}
+                </ul>
+            )}
         </div>
     );
 };

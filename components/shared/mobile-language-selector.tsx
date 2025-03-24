@@ -1,9 +1,15 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 const MobileLanguageSelector = () => {
     const { i18n } = useTranslation();
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true); // Устанавливаем флаг, что мы на клиенте
+    }, []);
 
     const changeLanguage = (lng: string) => {
         document.documentElement.lang = lng;
@@ -12,6 +18,10 @@ const MobileLanguageSelector = () => {
     };
 
     const languages: string[] = ["en", "ru", "az"];
+
+    if (!isClient) {
+        return null;
+    }
 
     return (
         <div className="mobile-language-selector">
