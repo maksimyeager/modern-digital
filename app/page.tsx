@@ -27,7 +27,7 @@ export default function Home() {
                     <div className="section__head">
                         <h2>{t("home-blog.title")}</h2>
                         <div className="section__link-wrapper">
-                            <Link href={"/blogs"} className="blog__link link-3">
+                            <Link href={"/blog"} className="blog__link link-3">
                                 {t("home-blog.btn")}
                                 <FiArrowUpRight size={20} />
                             </Link>

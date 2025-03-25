@@ -96,7 +96,8 @@
             align-items: center;
             gap: 15px;
             padding: 12px 30px;
-            background: linear-gradient(#0e0227, #0e0227) padding-box,
+            background:
+                linear-gradient(#0e0227, #0e0227) padding-box,
                 linear-gradient(
                         92.36deg,
                         rgba(255, 255, 255, 0.93) 12.67%,
@@ -107,7 +108,7 @@
             border: 1px solid transparent;
             border-radius: 15px;
 
-            p{
+            p {
                 line-height: 1.1;
             }
 
@@ -216,6 +217,7 @@
         }
 
         p {
+            color: #d6d5d5;
             font-size: 15px;
             font-weight: 300;
             line-height: 1.3;

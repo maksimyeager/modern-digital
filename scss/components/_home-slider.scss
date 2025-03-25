@@ -38,10 +38,6 @@
             &--active {
                 border: none;
                 background-color: #5800ff;
-
-                @media (max-width: 768px) {
-                    order: -1;
-                }
             }
         }
     }
@@ -68,7 +64,8 @@
         max-width: 650px;
         width: 100%;
         padding: 40px;
-        background: linear-gradient(#0e0227, #0e0227) padding-box,
+        background:
+            linear-gradient(#0e0227, #0e0227) padding-box,
             linear-gradient(90deg, #5800ff 0%, #01f59d 100%) border-box;
         border: 3px solid transparent;
         border-radius: 43px;

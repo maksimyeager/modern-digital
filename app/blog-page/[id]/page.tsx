@@ -2,8 +2,20 @@
 
 import { FaCalendar } from "react-icons/fa";
 import { IoIosShareAlt } from "react-icons/io";
+import { useParams } from "next/navigation";
+import { useBlogs } from "@/hooks/useBlogs";
+import { sanityClient } from "@/sanityClient";
+import imageUrlBuilder from "@sanity/image-url";
+
+const builder = imageUrlBuilder(sanityClient);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const urlFor = (source: any) => builder.image(source);
 
 export default function BlogPage() {
+    const { id } = useParams();
+    const { blogs, loading } = useBlogs();
+    const findBlog = blogs.find((item) => item.id.toString() === id);
+
     const handleShare = async () => {
         if (navigator.share) {
             try {
@@ -19,63 +31,55 @@ export default function BlogPage() {
         }
     };
 
+    if (!findBlog) return <div className="container"></div>;
+
     return (
         <div className="blog-page">
-            <div className="container">
-                <div className="blog-page__top">
-                    <div className="blog-page__image">
-                        <img src={"./../../images/image.png"} alt="" />
-                    </div>
-                    <div className="blog__page__info">
-                        <div className="blog-page__info-top">
-                            <h2>Blog</h2>
-                            <div className="blog-page__settings">
-                                <p className="data">
-                                    <FaCalendar /> <span>Thur 17 Nov 2022</span>
-                                </p>
-                                <button
-                                    onClick={handleShare}
-                                    className="share-button"
-                                >
-                                    <IoIosShareAlt color="#fff" />
-                                </button>
+            {!loading && (
+                <div className="container">
+                    <div className="blog-page__top">
+                        <div className="blog-page__image">
+                            <img
+                                src={urlFor(findBlog.image1.asset).url()}
+                                alt={findBlog?.title}
+                            />
+                        </div>
+                        <div className="blog__page__info">
+                            <div className="blog-page__info-top">
+                                <h2>{findBlog?.title}</h2>
+                                <div className="blog-page__settings">
+                                    <p className="data">
+                                        <FaCalendar />{" "}
+                                        <span>
+                                            {new Date(
+                                                findBlog.date
+                                            ).toDateString()}
+                                        </span>
+                                    </p>
+                                    <button
+                                        onClick={handleShare}
+                                        className="share-button"
+                                    >
+                                        <IoIosShareAlt color="#fff" />
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="blog-page__info-bottom">
+                                <p>{findBlog?.description1}</p>
                             </div>
                         </div>
-                        <div className="blog-page__info-bottom">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut
-                                enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur sint
-                                occaecat cupidatat non proident, sunt in culpa
-                                qui officia deserunt mollit anim id est laborum.
-                            </p>
+                    </div>
+                    <div className="blog-page__bottom">
+                        <p>{findBlog?.description2}</p>
+                        <div className="blog-page__image">
+                            <img
+                                src={urlFor(findBlog.image2.asset).url()}
+                                alt={findBlog?.title}
+                            />
                         </div>
                     </div>
                 </div>
-                <div className="blog-page__bottom">
-                    <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto beatae vitae dicta sunt explicabo. Nemo
-                        enim ipsam voluptatem quia voluptas sit aspernatur aut
-                        odit aut fugit, sed quia consequuntur magni dolores eos
-                        qui ratione voluptatem sequi nesciunt. Neque porro
-                        quisquam est, qui dolorem ipsum quia dolor sit amet,
-                        consectetur, adipisci velit, sed quia non numquam eius
-                        modi tempora incidunt ut labore et dolore magnam aliquam
-                        quaerat voluptatem. 
-                    </p>
-                    <div className="blog-page__image">
-                        <img src={"./../../images/image.png"} alt="" />
-                    </div>
-                </div>
-            </div>
+            )}
         </div>
     );
 }

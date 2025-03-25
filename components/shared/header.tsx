@@ -12,13 +12,12 @@ interface Props {
 }
 
 export const Header: React.FC<Props> = () => {
-    const { t, i18n } = useTranslation("global");
+    const { t } = useTranslation("global");
     const [open, setOpen] = useState(false);
     const handleClose = () => {
         setOpen(false);
         document.body.classList.add("no-scroll");
     };
-    console.log(i18n.language);
     return (
         <>
             <header className="header">
@@ -55,7 +54,7 @@ export const Header: React.FC<Props> = () => {
                             className="header__btn"
                             onClick={() => setOpen(true)}
                         >
-                            <img src="./images/hamburger.svg" alt="" />
+                            <img src="/images/hamburger.svg" alt="" />
                         </button>
                     </div>
                 </div>

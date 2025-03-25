@@ -34,17 +34,19 @@ const LanguageSelector = () => {
                 {i18n.language ? i18n.language.toUpperCase() : "EN"}{" "}
                 <FaChevronDown />
             </div>
-            {isOpen && (
-                <ul className="language-menu">
-                    {["ru", "en", "az"]
-                        .filter((lang) => lang !== i18n.language)
-                        .map((lang) => (
-                            <li key={lang} onClick={() => changeLanguage(lang)}>
-                                {lang.toUpperCase()}
-                            </li>
-                        ))}
-                </ul>
-            )}
+            <ul
+                className={`language-menu ${
+                    isOpen ? "language-menu--open" : ""
+                }`}
+            >
+                {["ru", "en", "az"]
+                    .filter((lang) => lang !== i18n.language)
+                    .map((lang) => (
+                        <li key={lang} onClick={() => changeLanguage(lang)}>
+                            {lang.toUpperCase()}
+                        </li>
+                    ))}
+            </ul>
         </div>
     );
 };

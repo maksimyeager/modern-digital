@@ -1,5 +1,5 @@
 @use "./components/all";
-// @import "./libs/reset";
+@import "./libs/reset";
 
 * {
     box-sizing: border-box;
@@ -26,7 +26,8 @@ body.no-scroll {
 
     .container {
         border: 1px solid #fff;
-        background: url("/images/banner/banner-1.png") padding-box,
+        background:
+            url("/images/banner/banner-1.png") padding-box,
             linear-gradient(
                     92.36deg,
                     rgba(255, 255, 255, 0.93) 12.67%,
@@ -87,7 +88,7 @@ body.no-scroll {
 }
 
 .link-1 {
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
     gap: 8px;
@@ -114,7 +115,7 @@ body.no-scroll {
 }
 
 .link-3 {
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
     gap: 10px;
