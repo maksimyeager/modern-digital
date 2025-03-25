@@ -14,8 +14,27 @@ export default defineType({
         defineField({
             name: "title",
             title: "Title",
-            type: "string",
-            validation: (Rule) => Rule.required(),
+            type: "object",
+            fields: [
+                {
+                    name: "en",
+                    title: "English",
+                    type: "string",
+                    validation: (Rule) => Rule.required(),
+                },
+                {
+                    name: "ru",
+                    title: "Русский",
+                    type: "string",
+                    validation: (Rule) => Rule.required(),
+                },
+                {
+                    name: "az",
+                    title: "Azərbaycan",
+                    type: "string",
+                    validation: (Rule) => Rule.required(),
+                },
+            ],
         }),
         defineField({
             name: "image1",
@@ -32,18 +51,47 @@ export default defineType({
         defineField({
             name: "shortDescription",
             title: "Short Description",
-            type: "text",
-            validation: (Rule) => Rule.max(200),
+            type: "object",
+            fields: [
+                {
+                    name: "en",
+                    title: "English",
+                    type: "text",
+                    validation: (Rule) => Rule.max(200),
+                },
+                {
+                    name: "ru",
+                    title: "Русский",
+                    type: "text",
+                    validation: (Rule) => Rule.max(200),
+                },
+                {
+                    name: "az",
+                    title: "Azərbaycan",
+                    type: "text",
+                    validation: (Rule) => Rule.max(200),
+                },
+            ],
         }),
         defineField({
             name: "description1",
             title: "Description 1",
-            type: "text",
+            type: "object",
+            fields: [
+                { name: "en", title: "English", type: "text" },
+                { name: "ru", title: "Русский", type: "text" },
+                { name: "az", title: "Azərbaycan", type: "text" },
+            ],
         }),
         defineField({
             name: "description2",
             title: "Description 2",
-            type: "text",
+            type: "object",
+            fields: [
+                { name: "en", title: "English", type: "text" },
+                { name: "ru", title: "Русский", type: "text" },
+                { name: "az", title: "Azərbaycan", type: "text" },
+            ],
         }),
         defineField({
             name: "date",

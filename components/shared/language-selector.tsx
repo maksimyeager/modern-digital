@@ -32,7 +32,7 @@ const LanguageSelector = () => {
         >
             <div className="language-toggle">
                 {i18n.language ? i18n.language.toUpperCase() : "EN"}{" "}
-                <FaChevronDown />
+                <FaChevronDown className={`${isOpen ? "icon-reverse" :""}`}/>
             </div>
             <ul
                 className={`language-menu ${
