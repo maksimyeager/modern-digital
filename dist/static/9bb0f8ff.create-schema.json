@@ -1,0 +1,228 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "id",
+        "type": "number"
+      },
+      {
+        "fields": [
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "presence",
+                    "constraint": "required"
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "en",
+            "type": "string",
+            "title": "English"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "presence",
+                    "constraint": "required"
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "ru",
+            "type": "string",
+            "title": "Русский"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "presence",
+                    "constraint": "required"
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "az",
+            "type": "string",
+            "title": "Azərbaycan"
+          }
+        ],
+        "name": "title",
+        "type": "object"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "image1",
+        "type": "image"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "image2",
+        "type": "image"
+      },
+      {
+        "fields": [
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "max",
+                    "constraint": 200
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "en",
+            "type": "text",
+            "title": "English"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "max",
+                    "constraint": 200
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "ru",
+            "type": "text",
+            "title": "Русский"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "max",
+                    "constraint": 200
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "az",
+            "type": "text",
+            "title": "Azərbaycan"
+          }
+        ],
+        "name": "shortDescription",
+        "type": "object"
+      },
+      {
+        "fields": [
+          {
+            "name": "en",
+            "type": "text",
+            "title": "English"
+          },
+          {
+            "name": "ru",
+            "type": "text",
+            "title": "Русский"
+          },
+          {
+            "name": "az",
+            "type": "text",
+            "title": "Azərbaycan"
+          }
+        ],
+        "name": "description1",
+        "type": "object"
+      },
+      {
+        "fields": [
+          {
+            "name": "en",
+            "type": "text",
+            "title": "English"
+          },
+          {
+            "name": "ru",
+            "type": "text",
+            "title": "Русский"
+          },
+          {
+            "name": "az",
+            "type": "text",
+            "title": "Azərbaycan"
+          }
+        ],
+        "name": "description2",
+        "type": "object"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "date",
+        "type": "datetime"
+      }
+    ],
+    "name": "blog",
+    "type": "document",
+    "title": "Blog / Блог"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "name": "subscribedAt",
+        "type": "datetime"
+      }
+    ],
+    "name": "emailSubscription",
+    "type": "document"
+  }
+]

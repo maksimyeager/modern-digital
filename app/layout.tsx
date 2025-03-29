@@ -15,9 +15,30 @@ export async function generateMetadata({
 }: {
     params: { locale: string };
 }) {
+    const siteName = "Modern Digital";
+    // const description =
+    //     "Modern Digital - это платформа для цифровых решений. Мы предлагаем современные технологии, маркетинг и дизайн.";
+    const imageUrl = "/logo.png";
+    const url = "https://moderndigital.az";
+
     return {
-        title: "Modern Digital",
+        title: siteName,
         lang: params.locale,
+        metadataBase: new URL(url),
+        openGraph: {
+            title: siteName,
+            images: [{ url: imageUrl }],
+            type: "website",
+            url,
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: siteName,
+            images: [imageUrl],
+        },
+        icons: {
+            icon: imageUrl,
+        },
     };
 }
 
@@ -31,7 +52,7 @@ export default function RootLayout({
     return (
         <html lang={params.locale}>
             <head>
-                <link rel="shortcut icon" href="/logo.png" />
+                <link rel="shortcut icon" href="/favicon.ico" />
             </head>
             <body className={alexandria.variable}>
                 <I18nProvider>
